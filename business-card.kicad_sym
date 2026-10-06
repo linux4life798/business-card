@@ -1459,7 +1459,7 @@
 			(hide yes)
 			(effects (font (size 1.27 1.27)) (justify left))
 		)
-		(property "Description" "Editable contact information; change symbol fields, then Update PCB from Schematic with footprint field updates enabled"
+		(property "Description" "Editable contact information with a vCard 4.0 QR code; CONTACT_WEB is display text, CONTACT_WEB_QR is the full URL encoded in the QR; use single-line vCard-safe text; Update PCB from Schematic with footprint field updates enabled"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -1472,31 +1472,44 @@
 			(do_not_autoplace yes)
 			(effects (font (size 1.778 1.778)) (justify left))
 		)
-		(property "CONTACT_ROLE" "Your Role"
+		(property "CONTACT_COMPANY" "Your Company"
 			(at -22.86 2.54 0)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects (font (size 1.27 1.27)) (justify left))
 		)
-		(property "CONTACT_EMAIL" "you@example.com"
-			(at -22.86 -2.54 0)
+		(property "CONTACT_ROLE" "Your Role"
+			(at -22.86 -1.27 0)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects (font (size 1.27 1.27)) (justify left))
 		)
-		(property "CONTACT_PHONE" "+1 202-555-0123"
+		(property "CONTACT_EMAIL" "you@example.com"
 			(at -22.86 -6.35 0)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects (font (size 1.27 1.27)) (justify left))
 		)
-		(property "CONTACT_WEB" "example.com"
+		(property "CONTACT_PHONE" "+1 202-555-0123"
 			(at -22.86 -10.16 0)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects (font (size 1.27 1.27)) (justify left))
 		)
-		(property "ki_keywords" "contact info name role email phone website business card"
+		(property "CONTACT_WEB" "example.com"
+			(at -22.86 -13.97 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "CONTACT_WEB_QR" "https://${CONTACT_WEB}"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "ki_keywords" "contact info name role email phone website business card vCard QR code"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -1513,7 +1526,7 @@
 		(symbol "Contact_Info_0_1"
 			(rectangle
 				(start -25.4 13.97)
-				(end 25.4 -13.97)
+				(end 25.4 -17.78)
 				(stroke (width 0.254) (type default))
 				(fill (type background))
 			)
