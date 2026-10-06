@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "business-card") (type "KiCad") (uri "${KIPRJMOD}/business-card.kicad_sym") (options "") (descr ""))
+)
