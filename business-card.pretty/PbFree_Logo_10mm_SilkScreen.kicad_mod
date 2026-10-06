@@ -1,0 +1,38 @@
+(footprint "PbFree_Logo_10mm_SilkScreen"
+	(version 20260206)
+	(generator "pcb_marking_vector")
+	(layer "F.Cu")
+	(descr "Lead-free marking: crossed-out Pb in a ring; 10 mm outer diameter; front silkscreen only; no pads")
+	(tags "Pb-free lead-free Pb logo marking silkscreen")
+	(property "Reference" "LOGO**"
+		(at 0 -6.25 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(effects (font (size 1 1) (thickness 0.15)))
+	)
+	(property "Value" "PbFree_Logo_10mm_SilkScreen"
+		(at 0 6.25 0)
+		(layer "F.Fab")
+		(hide yes)
+		(effects (font (size 1 1) (thickness 0.15)))
+	)
+	(attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
+	(fp_circle
+		(center 0 0)
+		(end 4.8 0)
+		(stroke (width 0.4) (type solid))
+		(fill none)
+		(layer "F.SilkS")
+	)
+	(fp_text user "Pb"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(effects (font (size 3.3 3.3) (thickness 0.4)))
+	)
+	(fp_line
+		(start -3.394113 3.394113)
+		(end 3.394113 -3.394113)
+		(stroke (width 0.4) (type solid))
+		(layer "F.SilkS")
+	)
+)

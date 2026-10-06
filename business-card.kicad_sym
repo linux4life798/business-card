@@ -1536,4 +1536,174 @@
 			)
 		)
 	)
+	(symbol "PbFree_Logo"
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(property "Reference" "LOGO"
+			(at 0 6.25 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "PbFree_Logo"
+			(at 0 -6.25 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" "business-card:PbFree_Logo_10mm_SilkScreen"
+			(at 0 0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" "Lead-free marking: crossed-out Pb in a ring with a 10 mm outer-diameter front-silkscreen footprint; no electrical pins"
+			(at 0 0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "ki_keywords" "Pb-free lead-free Pb logo marking silkscreen"
+			(at 0 0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "ki_fp_filters" "PbFree_Logo_*_SilkScreen"
+			(at 0 0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(symbol "PbFree_Logo_0_1"
+			(circle
+				(center 0 0)
+				(radius 4.8)
+				(stroke (width 0.4) (type default))
+				(fill (type none))
+			)
+			(text "Pb"
+				(at 0 0 0)
+				(effects (font (size 3.3 3.3) (thickness 0.4)))
+			)
+			(polyline
+				(pts (xy -3.394113 -3.394113) (xy 3.394113 3.394113))
+				(stroke (width 0.4) (type default))
+				(fill (type none))
+			)
+		)
+	)
+	(symbol "RoHS_Logo"
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(property "Reference" "LOGO"
+			(at 0 6.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "RoHS_Logo"
+			(at 0 -6.5 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "business-card:RoHS_Logo_10mm_SilkScreen"
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "RoHS compliant circular checkmark indicator with a 10 mm outer-diameter front-silkscreen footprint; no electrical pins"
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "RoHS compliant checkmark logo silkscreen"
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "RoHS_Logo_*_SilkScreen"
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "RoHS_Logo_0_1"
+			(circle
+				(center 0 0)
+				(radius 4.875)
+				(stroke
+					(width 0.25)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.65 2.2)
+					(xy -0.45 1.1)
+					(xy 1.85 3.2)
+				)
+				(stroke
+					(width 0.45)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(text "RoHS"
+				(at 0 -0.65 0)
+				(effects
+					(font
+						(size 1.6 1.6)
+						(thickness 0.25)
+					)
+				)
+			)
+			(text "COMPLIANT"
+				(at 0 -2.45 0)
+				(effects
+					(font
+						(size 0.8 0.8)
+						(thickness 0.15)
+					)
+				)
+			)
+		)
+	)
 )
