@@ -9,7 +9,223 @@
 		(date "2026-10-05")
 		(rev "1")
 	)
-	(lib_symbols)
+	(lib_symbols
+		(symbol "business-card:CH_Logo"
+			(exclude_from_sim yes)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files no)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "LOGO"
+				(at 0 5.5 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "CH_Logo"
+				(at 0 -5.5 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "business-card:CH_Logo_20mm_SilkScreen"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "CH monogram with a 20 mm wide front-silkscreen footprint; no electrical pins"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "CH monogram logo silkscreen"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "CH_Logo_*_SilkScreen"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CH_Logo_0_1"
+				(polyline
+					(pts
+						(xy -2.3654 3.9329) (xy -0.3919 3.9329) (xy -0.3818 3.9322) (xy -0.3732 3.9302) (xy -0.3658 3.9269)
+						(xy -0.3598 3.9222) (xy -0.3551 3.9162) (xy -0.3518 3.9089) (xy -0.3498 3.9002) (xy -0.3491 3.8902)
+						(xy -0.3491 3.3985) (xy -0.3496 3.3899) (xy -0.351 3.3817) (xy -0.3533 3.374) (xy -0.3566 3.3668)
+						(xy -0.3608 3.3601) (xy -0.3659 3.3539) (xy -0.372 3.3482) (xy -0.379 3.343) (xy -3.5681 1.1742)
+						(xy -3.5751 1.1689) (xy -3.5812 1.1632) (xy -3.5863 1.157) (xy -3.5906 1.1503) (xy -3.5938 1.1431)
+						(xy -3.5962 1.1354) (xy -3.5976 1.1273) (xy -3.598 1.1186) (xy -3.598 -1.197) (xy -3.5976 -1.2056)
+						(xy -3.5962 -1.2138) (xy -3.5938 -1.2215) (xy -3.5906 -1.2287) (xy -3.5863 -1.2354) (xy -3.5812 -1.2416)
+						(xy -3.5751 -1.2473) (xy -3.5681 -1.2525) (xy -0.379 -3.4142) (xy -0.372 -3.4194) (xy -0.3659 -3.4252)
+						(xy -0.3608 -3.4314) (xy -0.3566 -3.4381) (xy -0.3533 -3.4453) (xy -0.351 -3.453) (xy -0.3496 -3.4611)
+						(xy -0.3491 -3.4698) (xy -0.3491 -3.8902) (xy -0.3498 -3.9002) (xy -0.3518 -3.9089) (xy -0.3551 -3.9162)
+						(xy -0.3598 -3.9222) (xy -0.3658 -3.9269) (xy -0.3732 -3.9302) (xy -0.3818 -3.9322) (xy -0.3919 -3.9329)
+						(xy -2.3227 -3.9329) (xy -2.3401 -3.9317) (xy -2.3565 -3.9279) (xy -2.3721 -3.9217) (xy -2.3868 -3.913)
+						(xy -5.0501 -2.0235) (xy -5.0571 -2.0179) (xy -5.0632 -2.0119) (xy -5.0683 -2.0054) (xy -5.0725 -1.9985)
+						(xy -5.0758 -1.9912) (xy -5.0781 -1.9834) (xy -5.0795 -1.9751) (xy -5.08 -1.9665) (xy -5.08 1.8311)
+						(xy -5.0782 1.848) (xy -5.0729 1.8631) (xy -5.064 1.8765) (xy -5.0515 1.8881) (xy -2.4296 3.9115)
+						(xy -2.4149 3.9209) (xy -2.3993 3.9276) (xy -2.3828 3.9316) (xy -2.3654 3.9329) (xy -2.3654 3.9329)
+					)
+					(stroke
+						(width 0.001)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.4061 3.9329) (xy 0.4204 3.9315) (xy 0.4346 3.9272) (xy 0.4489 3.9201) (xy 0.4631 3.9101)
+						(xy 1.7883 2.8385) (xy 1.8008 2.8257) (xy 1.8097 2.8115) (xy 1.815 2.7958) (xy 1.8168 2.7787)
+						(xy 1.8168 0.456) (xy 3.6978 0.456) (xy 3.6978 2.3726) (xy 3.6986 2.387) (xy 3.701 2.3983) (xy 3.705 2.4064)
+						(xy 3.7106 2.4114) (xy 3.7178 2.4132) (xy 3.7266 2.4118) (xy 3.7371 2.4073) (xy 3.7491 2.3996)
+						(xy 5.0515 1.4535) (xy 5.064 1.4419) (xy 5.0729 1.4285) (xy 5.0782 1.4134) (xy 5.08 1.3965) (xy 5.08 -2.7644)
+						(xy 5.0782 -2.7814) (xy 5.0729 -2.7965) (xy 5.064 -2.8099) (xy 5.0515 -2.8214) (xy 3.7491 -3.8075)
+						(xy 3.7371 -3.8155) (xy 3.7266 -3.8203) (xy 3.7178 -3.8219) (xy 3.7106 -3.8203) (xy 3.705 -3.8155)
+						(xy 3.701 -3.8075) (xy 3.6986 -3.7963) (xy 3.6978 -3.7819) (xy 3.6978 -0.57) (xy 1.8168 -0.57)
+						(xy 1.8168 -2.7929) (xy 1.815 -2.8099) (xy 1.8097 -2.8253) (xy 1.8008 -2.8392) (xy 1.7883 -2.8514)
+						(xy 0.4275 -3.9087) (xy 0.418 -3.9157) (xy 0.4091 -3.9215) (xy 0.4009 -3.926) (xy 0.3932 -3.9293)
+						(xy 0.3862 -3.9313) (xy 0.3797 -3.932) (xy 0.3739 -3.9315) (xy 0.3687 -3.9297) (xy 0.3641 -3.9267)
+						(xy 0.3601 -3.9224) (xy 0.3568 -3.9168) (xy 0.354 -3.91) (xy 0.3519 -3.9019) (xy 0.3503 -3.8926)
+						(xy 0.3494 -3.882) (xy 0.3491 -3.8702) (xy 0.3491 3.8759) (xy 0.35 3.8893) (xy 0.3527 3.9008)
+						(xy 0.3571 3.9106) (xy 0.3634 3.9187) (xy 0.3714 3.9249) (xy 0.3812 3.9293) (xy 0.3928 3.932)
+						(xy 0.4061 3.9329) (xy 0.4061 3.9329)
+					)
+					(stroke
+						(width 0.001)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(symbol
+		(lib_id "business-card:CH_Logo")
+		(at 254 162.56 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "245ad908-9c75-4e78-8419-104fd5c0cda6")
+		(property "Reference" "LOGO1"
+			(at 260.35 162.5599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CH_Logo"
+			(at 254 168.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "business-card:CH_Logo_20mm_SilkScreen"
+			(at 254 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 254 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "CH monogram with a 20 mm wide front-silkscreen footprint; no electrical pins"
+			(at 254 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "business-card"
+				(path "/d47d11a5-7f30-4f5f-a335-6efc49b156b4"
+					(reference "LOGO1")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")
