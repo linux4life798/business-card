@@ -2788,4 +2788,82 @@
       )
     )
   )
+  (symbol "NXP_NTAG_Class4_Antenna"
+    (pin_numbers hide)
+    (pin_names (offset 0))
+    (in_pos_files no)
+    (in_bom no)
+    (on_board yes)
+    (property "Reference" "L"
+      (at -5.08 8.89 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "NXP_NTAG_Class4_Antenna"
+      (at -5.08 -8.89 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "business-card:NXP_NTAG_Class4_Antenna_54x27mm_3Turns"
+      (at 0 0 0)
+      (hide yes)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Datasheet" "https://www.nxp.com/webapp/Download?colCode=SW3639"
+      (at 0 0 0)
+      (hide yes)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Description" "NXP SW3639 NTAG I2C plus Class 4 printed PCB antenna; nominal 54 x 27 mm, 3 turns, 0.30 mm trace / 0.95 mm gap; ANT1 to LA, ANT2 to LB. Preserve antenna copper clearance and tune in the final PCB."
+      (at 0 0 0)
+      (hide yes)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "ki_keywords" "NXP NTAG NFC RFID SW3639 Class4 PCB loop antenna energy harvesting"
+      (at 0 0 0)
+      (hide yes)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "ki_fp_filters" "NXP_NTAG_Class4_Antenna_54x27mm_3Turns"
+      (at 0 0 0)
+      (hide yes)
+      (effects (font (size 1.27 1.27)))
+    )
+    (symbol "NXP_NTAG_Class4_Antenna_0_1"
+      (arc
+        (start 0 5.08)
+        (mid 2.54 2.54)
+        (end 0 0)
+        (stroke (width 0.254) (type default))
+        (fill (type none))
+      )
+      (arc
+        (start 0 0)
+        (mid 2.54 -2.54)
+        (end 0 -5.08)
+        (stroke (width 0.254) (type default))
+        (fill (type none))
+      )
+    )
+    (symbol "NXP_NTAG_Class4_Antenna_1_1"
+      (pin passive line
+        (at -5.08 5.08 0)
+        (length 5.08)
+        (name "ANT1"
+          (effects (font (size 1 1)))
+        )
+        (number "ANT1"
+          (effects (font (size 1 1)))
+        )
+      )
+      (pin passive line
+        (at -5.08 -5.08 0)
+        (length 5.08)
+        (name "ANT2"
+          (effects (font (size 1 1)))
+        )
+        (number "ANT2"
+          (effects (font (size 1 1)))
+        )
+      )
+    )
+  )
 )
