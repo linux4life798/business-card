@@ -42,4 +42,9 @@
     (fill (thermal_gap 0.3) (thermal_bridge_width 0.3))
     (polygon (pts (xy -0.25 -0.25) (xy 0.25 -0.25) (xy 0.25 0.25) (xy -0.25 0.25)))
   )
+  (model "${KIPRJMOD}/business-card.3dshapes/NXP_SOT902-3_XQFN-8_1.6x1.6mm.step"
+    (offset (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0))
+  )
 )
