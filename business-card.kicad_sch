@@ -3216,9 +3216,9 @@
 		)
 		(uuid "c2d0a0ee-cb38-4548-bd88-21d0af6dc048")
 	)
-	(text "C1 originally 1.5 pF.\n5.1 pF tuning prototype; verify on assembled PCB."
+	(text "C1 originally 1.5 pF.\n0.6 mm PCB: 5.1 pF prototype (~14.485 MHz).\n0.8 mm PCB: calculated C1 ~4.8 pF for 14.5 MHz;\n4.7 pF is the nearest standard E24 value.\nWith 5.1 pF, 0.8 mm resonance is ~14.465 MHz.\nAssumes nominal 50 pF chip; same copper, FR4 and mask.\nVerify tuning on assembled PCB with LED load."
 		(exclude_from_sim no)
-		(at 77.47 60.96 0)
+		(at 77.47 65.405 0)
 		(effects
 			(font
 				(size 1 1)
