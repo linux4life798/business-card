@@ -84,7 +84,7 @@ def main():
             filenames.extend(render_schematic(root, temporary))
         # Publish only after all requested exports succeed.
         for filename in filenames:
-            shutil.copy2(temporary / filename, root / "images" / filename)
+            shutil.copy2(temporary / filename, root / "docs" / filename)
 
 
 if __name__ == "__main__":

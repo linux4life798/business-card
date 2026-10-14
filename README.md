@@ -4,8 +4,8 @@ A thin, wallet-size PCB business card combining printed contact details, a vCard
 QR code, custom copper and silkscreen artwork, and passive NFC.
 
 <p>
-  <img src="images/business-card-front.png" width="30%" alt="KiCad render of the card's front, showing the lantern artwork, LED, circuitry, and NFC antenna">
-  <img src="images/business-card-back.png" width="68%" alt="KiCad render of the card's back, showing contact details, CH logo, and vCard QR code">
+  <img src="docs/business-card-front.png" width="30%" alt="KiCad render of the card's front, showing the lantern artwork, LED, circuitry, and NFC antenna">
+  <img src="docs/business-card-back.png" width="68%" alt="KiCad render of the card's back, showing contact details, CH logo, and vCard QR code">
 </p>
 
 *KiCad 3D renders of the front and back, with gold on exposed copper.*
@@ -14,7 +14,7 @@ The design uses an NXP NT3H2111W0FHKH (NTAG I2C Plus) and a printed antenna for
 tap-to-share contact information. It is designed to harvest energy from the NFC
 reader's field to illuminate an LED, with no onboard battery or microcontroller.
 
-[![KiCad export of the main schematic page](images/business-card-schematic.svg)](images/business-card-schematic.pdf)
+[![KiCad export of the main schematic page](docs/business-card-schematic.svg)](docs/business-card-schematic.pdf)
 
 *KiCad schematic export; click for the full-page PDF.*
 
@@ -36,7 +36,7 @@ Regenerate the README previews from the saved design with Python 3, KiCad 10,
 and KiCad's standard 3D model libraries:
 
 ```sh
-python3 images/render-readme.py
+python3 docs/render-readme.py
 ```
 
 Use `--only schematic` to refresh just the SVG and PDF, or `--only pcb` for the
