@@ -3216,6 +3216,17 @@
 		)
 		(uuid "c2d0a0ee-cb38-4548-bd88-21d0af6dc048")
 	)
+	(text "C1 originally 1.5 pF.\n5.1 pF tuning prototype; verify on assembled PCB."
+		(exclude_from_sim no)
+		(at 77.47 60.96 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left)
+		)
+		(uuid "09b651b6-e6f9-42a5-a7be-d6a7e8ca8720")
+	)
 	(text "Minimal NFC and LED Circuit"
 		(exclude_from_sim no)
 		(at 133.604 22.606 0)
@@ -5027,7 +5038,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1.5pF"
+		(property "Value" "5.1pF"
 			(at 107.95 48.2599 0)
 			(show_name no)
 			(do_not_autoplace no)
