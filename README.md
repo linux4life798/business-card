@@ -35,11 +35,8 @@ contents with your own.
 
 ## Fabrication
 
-Fabrication targets JLCPCB's low-cost two-layer, 0.6 mm FR-4 process with 1 oz
-copper, black solder mask, and lead-free HASL. Board Setup and the
-[custom rules](business-card.kicad_dru) use conservative economy limits;
-see the [DRC report](docs/jlcpcb-drc.json) for outstanding issues. JLCPCB's
-Economic assembly service requires at least 0.8 mm board thickness.
+Fabrication targets a two-layer, 0.6 mm FR-4 board with 1 oz copper, black solder
+mask, and lead-free HASL.
 
 Antenna tuning, NFC read range, and LED brightness require validation on
 assembled hardware.

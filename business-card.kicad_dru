@@ -1,74 +1,205 @@
 (version 1)
 
-# JLCPCB low-cost bare PCB: 2 layers, 0.6 mm FR-4, 1 oz, black mask,
-# lead-free HASL. Sources checked 2026-10-13:
+# Fabrication checks researched 2026-10-14 for a routed, 2-layer, 0.6 mm FR-4
+# board with 1 oz copper, black solder mask, and lead-free HASL.
+# JLCPCB is the first removable block; PCBWAY is the second removable block.
+# Use published capability limits without added economy/normal-tier margins.
+# Each rule name identifies its source. Duplicated assertions intentionally
+# report both manufacturers. Ambiguous and review-only limits are warnings.
+# Source comparisons and manual checks: docs/fabrication-constraints.md
+#
+# IMPORTANT: Board Setup (.kicad_pro) retains the shared ordinary minima:
+# trace/space .10 (both), mechanical drill .15 (both), via annulus .15
+# (PCBWAY standard capability), minimum via diameter .45 (=.15 drill +2*.15
+# annulus), routed-edge .20 (JLCPCB minimum / PCBWAY medium tier), hole-to-
+# copper and via hole-to-hole .20 (JLCPCB), silk height 1.0 (JLCPCB),
+# silk stroke/clearance .15 (both), mask-opening-to-copper .09 (JLCPCB).
+# Deleting a block removes its CUSTOM checks only. To relax ordinary minima
+# for one supplier, also change Board Setup > Design Rules > Constraints.
+# Default net class remains .20 trace/clearance and .60/.30 vias. These are
+# routing defaults, not minimum capabilities. .10/.127/.15 widths are selectable.
+#
+# Saved mask setup: expansion 0 with footprint overrides; residual web .1016
+# (PCBWAY medium-tier 4 mil, replacing the earlier extrapolated .13 web),
+# no bridge exclusions. Residual web and copper-pad spacing are distinct.
+# Do not change these automatically when removing a supplier's rule block.
+#
+# KiCad usually selects the last matching native constraint. PCBWAY does not
+# repeat weaker PTH annular/hole-spacing constraints over JLCPCB's rules.
+# Its .15 standard annulus is enforced by Board Setup for pads AND vias.
+# The stricter JLCPCB NPTH
+# slot limit uses an independent assertion, which the later .80 PCBWAY rule
+# cannot override. Keep this distinction when editing or reordering rules.
+
+# ========================================================================
+# BEGIN JLCPCB -- remove through END JLCPCB to remove these custom checks
+# ========================================================================
 # https://jlcpcb.com/capabilities/pcb-capabilities
 # https://jlcpcb.com/blog/custom-pcb-cost
 # https://jlcpcb.com/help/article/in-what-cases-will-there-be-charged-extra
 # https://jlcpcb.com/capabilities/pcb-assembly-capabilities
 #
-# Board Setup stores the ordinary constraints: 0.127 mm trace/space,
-# 0.30/0.60 mm drill/via, 0.15 mm via annulus, 0.20 mm routed-edge and
-# hole-to-copper clearance, 0.20 mm via hole spacing, and 1.0/0.15 mm
-# silkscreen height/stroke with 0.15 mm silk clearance. The trace and via
-# choices are conservative economy guidance, not absolute capability limits.
-# Default routing remains 0.20 mm trace/clearance and 0.60/0.30 mm vias.
+# Capability trace/space .10/.10; drill .15; via .25 with .05 radial annulus.
+# Economy advice (.127 trace/space, .30/.60 drill/via) is not enforced.
+# Smaller drills may cost more; that is not a DRC manufacturing failure.
+# Capability: routed-edge .20, hole-to-copper .20 (PTH .28), via hole-gap .20,
+# pad hole-gap .45, silk height/stroke/clearance 1.0/.15/.15.
+# PTH annulus .18 absolute, .20 nominal, .25 recommended.
+# Black-mask copper-pad gap .13; mask-opening-to-unrelated-copper .09.
 #
-# Mask expansion remains 0; minimum black-mask web is 0.13 mm and mask
-# opening to unrelated copper is 0.09 mm. Footprint mask overrides remain.
-# JLCPCB specifies 0.13 mm pad spacing; using that as the remaining web
-# is conservative where a footprint has positive mask expansion.
-# KiCad merges openings closer than the minimum web and reports bridges;
-# no bridge exclusions are enabled. Check final Gerbers and fab CAM review.
-# 0.6 mm finished thickness tolerance is +/-0.1 mm. The nominal stackup is
-# not an impedance-controlled laminate specification. Economic PCBA requires
-# 0.8-1.6 mm thickness; this profile is for bare-board fabrication.
-#
-# Geometry inside custom copper pads / filled artwork, same-net trace gaps,
-# coil turn gaps, and minimum features inside filled silk polygons require
-# Gerber/DFM review; ordinary trace-width rules do not fully inspect them.
-# Masked coils need 0.15/0.15 mm width/spacing; exposed coils need
-# 0.25/0.25 mm and ENIG. Preserve the saved masked antenna geometry.
+# Manual / order / Gerber checks:
+# - 0.6 +/-0.1 finished thickness; thin-board max599x497, minimum3x3 mm;
+#   regular routed outline +/-0.2; PTH tolerance +.13/-.08, position +/-.075.
+# - Masked coil width/gap .15/.15; exposed .25/.25 AND ENIG; same-net gaps
+#   .25. Custom copper pads / net-tie internals / artwork need geometry review.
+# - Filled silk shapes and TrueType lettering need minimum-feature review.
+# - Minimum unplated routed slot1.0, plated slot.5, length/width>=2.
+# - Tent .30 vias on both sides; check Gerbers. Tenting is not filling/plugging.
+# - Economic PCBA requires .8-1.6 thickness; this profile is bare-board only.
 
-(rule "JLCPCB standard through vias only"
+(rule "JLCPCB: standard through vias only"
   (constraint disallow blind_via buried_via micro_via))
 
-# Component PTH annuli have a different limit from vias: 0.18 mm absolute,
-# 0.20 mm nominal minimum and 0.25 mm recommended in JLCPCB's table.
-(rule "JLCPCB PTH annular ring and hole clearance"
+(rule "JLCPCB: PTH minimum annulus 0.18 mm"
   (condition "A.Type == 'Pad' && A.Pad_Type == 'Through-hole'")
-  (constraint annular_width (min 0.18mm))
+  (constraint annular_width (min 0.18mm)))
+
+# The source specifies PTH-to-track: do not extend .28 to every copper shape.
+(rule "JLCPCB: PTH hole to track 0.28 mm"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'Through-hole' && B.Type == 'Track'")
   (constraint hole_clearance (min 0.28mm)))
 
-# Use the larger pad-hole spacing when either drilled object is a pad.
-(rule "JLCPCB pad hole spacing"
+(rule "JLCPCB: pad hole spacing 0.45 mm"
   (condition "A.Type == 'Pad'")
   (constraint hole_to_hole (min 0.45mm)))
 
-(rule "JLCPCB round NPTH minimum"
+(rule "JLCPCB: round NPTH minimum 0.50 mm"
   (condition "A.Type == 'Pad' && A.Pad_Type == 'NPTH, mechanical' && A.Hole_Size_X == A.Hole_Size_Y")
   (constraint hole_size (min 0.5mm)))
 
-(rule "JLCPCB non-plated slot minimum"
+# Independent assertion preserves this stricter limit even with PCBWAY below.
+(rule "JLCPCB: non-plated slot minimum 1.00 mm"
   (condition "A.Type == 'Pad' && A.Pad_Type == 'NPTH, mechanical' && A.Hole_Size_X != A.Hole_Size_Y")
-  (constraint hole_size (min 1.0mm)))
+  (constraint assertion "A.Hole_Size_X >= 1.0mm && A.Hole_Size_Y >= 1.0mm"))
 
-(rule "JLCPCB plated slot minimum"
+(rule "JLCPCB: plated slot minimum 0.50 mm"
   (condition "A.Type == 'Pad' && A.Pad_Type == 'Through-hole' && A.Hole_Size_X != A.Hole_Size_Y")
   (constraint hole_size (min 0.5mm)))
 
-(rule "JLCPCB SMD pad spacing"
+(rule "JLCPCB review: slot length below twice its width"
+  (condition "A.Type == 'Pad' && A.Hole_Size_X > 0mm && A.Hole_Size_Y > 0mm && A.Hole_Size_X != A.Hole_Size_Y")
+  (constraint assertion "A.Hole_Size_X >= 2 * A.Hole_Size_Y || A.Hole_Size_Y >= 2 * A.Hole_Size_X")
+  (severity warning))
+
+(rule "JLCPCB: SMD electrical pad spacing 0.15 mm"
   (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Pad_Type == 'SMD' && B.Pad_Type == 'SMD'")
   (constraint clearance (min 0.15mm)))
 
-# Only copper pads, not the separate paste-only apertures in U1.
-(rule "JLCPCB minimum SMD copper pad 0.25 mm"
-  (condition "A.Type == 'Pad' && A.Pad_Type == 'SMD' && (A.existsOnLayer('F.Cu') || A.existsOnLayer('B.Cu'))")
-  (constraint assertion "A.Size_X >= 0.25mm && A.Size_Y >= 0.25mm"))
+# JLCPCB lists .25x.25 without explaining elongated QFN-land exceptions.
+# U1's .22x.40 lands follow NXP: review warnings, not mandatory enlargement.
+# Exclude paste-only, masked coil connections and custom-pad anchors.
+(rule "JLCPCB review: exposed SMD pad below 0.25 mm"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'SMD' && A.Pad_Shape != 'Custom' && ((A.existsOnLayer('F.Cu') && A.existsOnLayer('F.Mask')) || (A.existsOnLayer('B.Cu') && A.existsOnLayer('B.Mask')))")
+  (constraint assertion "A.Size_X >= 0.25mm && A.Size_Y >= 0.25mm")
+  (severity warning))
 
-# Stroke checks for silk drawings complement text rules. Zero-stroke filled
-# logos and QR modules need separate feature-size inspection.
-(rule "JLCPCB silkscreen line width 0.15 mm"
+(rule "JLCPCB: silkscreen line width 0.15 mm"
   (condition "A.Type == 'Graphic' && (A.Layer == 'F.SilkS' || A.Layer == 'B.SilkS') && A.Line_Width > 0mm")
   (constraint assertion "A.Line_Width >= 0.15mm")
   (severity warning))
+
+# END JLCPCB
+
+# ========================================================================
+# BEGIN PCBWAY -- remove through END PCBWAY to remove these custom checks
+# ========================================================================
+# https://www.pcbway.com/capabilities.html
+# https://www.pcbway.com/pcb_prototype/PCB_Design_Rule_Check.html
+# https://www.pcbway.com/pcb_prototype/PCB_Manufacturing_tolerances.html
+# https://www.pcbway.com/pcb_prototype/Plated_through_slots.html
+# https://www.pcbway.com/helpcenter/soldermask_issues/Soldermask_bridge.html
+# https://www.pcbway.com/helpcenter/Engineering_Questions/Spiral_coil_board.html
+#
+# Standard capability: .10 trace/space, .15 drill, .15 radial annulus.
+# Economy advice6mil=.1524 and KiCad example5mil=.127 are not hard limits.
+# Removed the example's .25 PTH annulus, .33/.254 hole-to-track and .50
+# hole spacing. JLCPCB's .18 PTH annulus/.28 PTH-to-track/.45 pad-hole rules
+# still apply when that block is enabled. PCBWAY's lower standard annulus
+# .15 is enforced globally; lower component-hole gap13mil=.3302 is recorded
+# for manual review when JLCPCB's block is removed (the global .20 via gap
+# alone is not a component-hole rule). Normal via gap11mil is advice only.
+# Edge .20 is the medium tier; .25/.30 normal recommendations are not imposed.
+# Advanced annuli below8mil and SMD widths below9mil require review; the
+# generic standard annulus table instead says .15. Do not turn that ambiguity
+# into a stricter mandatory rule.
+#
+# Manual / order / Gerber checks:
+# - 0.6 +/-0.1 thickness; normal CNC outline +/-0.2; PTH holes +/-.08,
+#   NPTH +/-.05, hole position +/-.075. Nominal .6/.3 aspect ratio is2:1,
+#   below normal8:1. Do not add process tolerances to all design spacings.
+# - Standard board size3x3 to1200x600 (older page1100x500). Quote to confirm.
+# - PTH lead holes .50 recommended; .30 via-like pads are not component fits.
+# - Coil width/gap .20/.20 (prefer greater); custom pads and artwork need
+#   geometric review. Masked L1 uses .30 width and >=.2657 measured turn gap.
+# - Black-mask IC copper-pad gap .22 is needed to retain mask bridges;
+#   normal residual web4.5mil=.1143, medium4mil=.1016. Missing IC mask
+#   bridges can be accepted by the customer, so pad gaps are review warnings.
+# - Mask lettering1.2 high/.2 width and spacing; negative copper lettering
+#   .8 high/.15 width. Filled/knockout polygons need Gerber feature checks.
+# - Unplated slot .80, plated .50, length/width>=2. Milling tool min.80,
+#   standard2.0; internal radius>=half tool diameter. Inspect Edge.Cuts paths
+#   and drill-to-outline breakout; native hole-to-hole DRC excludes slots.
+# - Ordinary .30 vias tented both sides; mask coverage is not filling/plugging
+#   and does not guarantee an opaque, flat, sealed surface. Inspect Gerbers.
+# - Lead-free HASL is supported, but fine-pitch U1 solderability needs review.
+# - Panelization/V-score, HDI, edge plating, castellations, filled/capped vias,
+#   heavy copper, special laminate/impedance and PCBA are outside this profile.
+
+(rule "PCBWAY: standard through vias only"
+  (constraint disallow blind_via buried_via micro_via))
+
+(rule "PCBWAY: round NPTH minimum 0.50 mm"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'NPTH, mechanical' && A.Hole_Size_X == A.Hole_Size_Y")
+  (constraint hole_size (min 0.5mm)))
+
+(rule "PCBWAY: non-plated slot minimum 0.80 mm"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'NPTH, mechanical' && A.Hole_Size_X != A.Hole_Size_Y")
+  (constraint hole_size (min 0.8mm)))
+
+(rule "PCBWAY: plated slot minimum 0.50 mm"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'Through-hole' && A.Hole_Size_X != A.Hole_Size_Y")
+  (constraint hole_size (min 0.5mm)))
+
+(rule "PCBWAY review: slot length below twice its width"
+  (condition "A.Type == 'Pad' && A.Hole_Size_X > 0mm && A.Hole_Size_Y > 0mm && A.Hole_Size_X != A.Hole_Size_Y")
+  (constraint assertion "A.Hole_Size_X >= 2 * A.Hole_Size_Y || A.Hole_Size_Y >= 2 * A.Hole_Size_X")
+  (severity warning))
+
+# Assertion keeps the existing hole-size minimum's error severity intact.
+(rule "PCBWAY review: round drilled pad hole above 6 mm"
+  (condition "A.Type == 'Pad' && A.Hole_Size_X == A.Hole_Size_Y")
+  (constraint assertion "A.Hole_Size_X <= 6mm")
+  (severity warning))
+
+# Mask bridges can be omitted/merged by CAM; this is a review warning, not
+# an electrical minimum. Separate constraint preserves JLCPCB's .15 clearance.
+# Scoped to pad pairs so intentional track-to-pad connections are unaffected.
+(rule "PCBWAY review: black-mask bridge pad gap below 0.22 mm"
+  (layer outer)
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Pad_Type == 'SMD' && B.Pad_Type == 'SMD' && ((A.existsOnLayer('F.Cu') && B.existsOnLayer('F.Cu') && A.existsOnLayer('F.Mask') && B.existsOnLayer('F.Mask')) || (A.existsOnLayer('B.Cu') && B.existsOnLayer('B.Cu') && A.existsOnLayer('B.Mask') && B.existsOnLayer('B.Mask')))")
+  (constraint physical_clearance (min 0.22mm))
+  (severity warning))
+
+# Normal width12mil=.3048; medium9mil=.2286; below9mil non-standard review.
+# Exclude paste-only, masked coil connections and custom-pad anchors.
+(rule "PCBWAY review: exposed SMD width below 9 mil"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'SMD' && A.Pad_Shape != 'Custom' && ((A.existsOnLayer('F.Cu') && A.existsOnLayer('F.Mask')) || (A.existsOnLayer('B.Cu') && A.existsOnLayer('B.Mask')))")
+  (constraint assertion "A.Size_X >= 0.2286mm && A.Size_Y >= 0.2286mm")
+  (severity warning))
+
+(rule "PCBWAY: silkscreen line width 0.15 mm"
+  (condition "A.Type == 'Graphic' && (A.Layer == 'F.SilkS' || A.Layer == 'B.SilkS') && A.Line_Width > 0mm")
+  (constraint assertion "A.Line_Width >= 0.15mm")
+  (severity warning))
+
+# END PCBWAY
