@@ -19,10 +19,9 @@ the design:
 
 - [business-card.kicad_sch](business-card.kicad_sch) — circuit schematic.
 - [business-card.kicad_pcb](business-card.kicad_pcb) — PCB layout.
-- [business-card.kicad_sym](business-card.kicad_sym),
-  [business-card.pretty/](business-card.pretty/), and
-  [business-card.3dshapes/](business-card.3dshapes/) — project symbols, footprints,
-  and 3D models.
+- [business-card.kicad_sym](business-card.kicad_sym) — project symbols.
+- [business-card.pretty/](business-card.pretty/) — project footprints.
+- [business-card.3dshapes/](business-card.3dshapes/) — project 3D models.
 - [artwork/](artwork/) — SVG artwork and previews.
 
 If adapting the card, replace the printed contact details, QR payload, and NFC
