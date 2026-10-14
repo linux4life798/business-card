@@ -107,7 +107,6 @@
 		)
 		(capping no)
 		(filling no)
-		(zone_defaults)
 		(grid_origin 142.8 96.99)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
@@ -153,7 +152,7 @@
 		(descr "Tag-Connect programming header; http://www.tag-connect.com/Materials/TC2030-IDC-NL.pdf")
 		(tags "tag connect programming header pogo pins")
 		(property "Reference" "J1"
-			(at -4.138662 -0.10545 90)
+			(at 3.111338 -3.10545 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "4786d2c1-6526-438f-b3bc-3216e7229d6b")
@@ -399,16 +398,16 @@
 		(embedded_fonts no)
 	)
 	(footprint "business-card:Amicc_A-SP192SS1C-C01-3C_SideView"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "41af0c23-892c-4e9d-81e5-95929a7a2338")
 		(at 107.600573 91.825183 90)
 		(descr "Orange side-view LED, 1.6x0.6x0.3 mm; 1=A, 2=K")
 		(tags "LED orange side-view side-emitting right-angle Amicc C5179642 0603")
 		(property "Reference" "D1"
-			(at -3.5 0 90)
+			(at -4.664817 0 90)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "7f793be3-53b6-4016-938c-9916b06d40d9")
 			(effects
 				(font
@@ -418,7 +417,7 @@
 			)
 		)
 		(property "Value" "A-SP192SS1C-C01-3C"
-			(at 6.75 -0.055 90)
+			(at 9.085183 -0.055 90)
 			(layer "F.Fab")
 			(uuid "4b19947a-0776-4811-82d3-925a9d64f536")
 			(effects
@@ -2894,6 +2893,7 @@
 		(embedded_fonts no)
 	)
 	(footprint "business-card:LanternLift_GiftWrap_Copper_SilkScreen"
+		(locked yes)
 		(layer "F.Cu")
 		(uuid "c2347a52-069c-4e99-8deb-2d932edafc31")
 		(at 107.600573 91.825183 90)
