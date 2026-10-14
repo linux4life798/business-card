@@ -31,13 +31,3 @@ the design:
 If adapting the card, replace the printed contact details, QR payload, and NFC
 contents with your own. Antenna tuning, NFC read range, and LED brightness require
 validation on assembled hardware.
-
-Regenerate the README previews from the saved design with Python 3, KiCad 10,
-and KiCad's standard 3D model libraries:
-
-```sh
-python3 docs/render-readme.py
-```
-
-Use `--only schematic` to refresh just the SVG and PDF, or `--only pcb` for the
-two 3D renders.
