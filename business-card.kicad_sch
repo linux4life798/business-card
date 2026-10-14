@@ -1210,7 +1210,7 @@
 					)
 				)
 			)
-			(property "Footprint" "business-card:CH_Logo_20mm_SilkScreen"
+			(property "Footprint" "business-card:CH_Logo_20mm_Copper"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1349,7 +1349,7 @@
 					)
 				)
 			)
-			(property "Footprint" "business-card:CJH_Signature_Copper_SilkScreen"
+			(property "Footprint" "business-card:CJH_Signature_Copper_Masked"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4632,7 +4632,7 @@
 				)
 			)
 		)
-		(property "Footprint" "business-card:CH_Logo_20mm_SilkScreen"
+		(property "Footprint" "business-card:CH_Logo_20mm_Copper"
 			(at 90.17 195.58 0)
 			(hide yes)
 			(show_name no)

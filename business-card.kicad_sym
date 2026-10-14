@@ -15,7 +15,7 @@
 			(at 0 0 0) (hide yes)
 			(effects (font (size 1.27 1.27)))
 		)
-		(property "Footprint" "business-card:CJH_Signature_Copper_SilkScreen"
+		(property "Footprint" "business-card:CJH_Signature_Copper_Masked"
 			(at 0 0 0) (hide yes)
 			(effects (font (size 1.27 1.27)))
 		)
@@ -230,7 +230,7 @@
 			(hide yes)
 			(effects (font (size 1.27 1.27)))
 		)
-		(property "Footprint" "business-card:CH_Logo_20mm_SilkScreen"
+		(property "Footprint" "business-card:CH_Logo_20mm_Copper"
 			(at 0 0 0)
 			(hide yes)
 			(effects (font (size 1.27 1.27)))

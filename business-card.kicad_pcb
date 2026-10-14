@@ -400,7 +400,7 @@
 		(layer "F.Cu")
 		(uuid "41af0c23-892c-4e9d-81e5-95929a7a2338")
 		(at 107.600573 91.825183 90)
-		(descr "Amicc A-SP192SS1C-C01-3C, C5179642, orange side-view LED; 1.60 x 0.60 x 0.30 mm. Manufacturer ADE-192S-007 V1, 2014-04-17, p7. Body-centered origin; light towards -Y; manufacturer pin 1=A, pin 2=K. 0.65 mm square pads, 0.80 mm inner gap, pad centers Y=+0.195 mm.")
+		(descr "Orange side-view LED, 1.6x0.6x0.3 mm; 1=A, 2=K")
 		(tags "LED orange side-view side-emitting right-angle Amicc C5179642 0603")
 		(property "Reference" "D1"
 			(at -3.5 0 90)
@@ -452,7 +452,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "dd22d85c-31e0-4af0-8f24-f570bc8e1607")
+			(uuid "ad2c5758-8f06-42bb-9a64-d42518e5d3b2")
 			(effects
 				(font
 					(size 1 1)
@@ -465,7 +465,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "c9be55ea-8129-4f84-9e4d-4a517b64f320")
+			(uuid "1cac9d1d-27a5-4d61-b0c3-f7a0faa924d4")
 			(effects
 				(font
 					(size 1 1)
@@ -478,7 +478,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "4c1d802d-1942-4a35-b23c-77ed0a81181b")
+			(uuid "1d38af39-3f1d-433a-b1a2-8d24d6769631")
 			(effects
 				(font
 					(size 1 1)
@@ -1004,7 +1004,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "aa6b3354-1310-44ab-99ae-867f7f9ced7b")
+			(uuid "95c0d243-f2ee-4e9b-8378-b88dd833db03")
 			(effects
 				(font
 					(size 1 1)
@@ -1017,7 +1017,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "81e5c848-bfbf-40a1-ab65-fac395d48b0c")
+			(uuid "c26cff77-4e3b-491e-a6d9-cd5200fe39dc")
 			(effects
 				(font
 					(size 1 1)
@@ -1881,7 +1881,7 @@
 		(layer "F.Cu")
 		(uuid "ac729c78-6345-437c-9d06-a844227635c6")
 		(at 101.5 115.5 90)
-		(descr "CJH signature in front copper under solder mask; no mask openings or silkscreen. Automatic two-digit current UTC year in YEAR. Replace YEAR with a literal such as 26 to freeze the date. 1.2 mm text size, 0.2 mm strokes. Enable Update footprint fields from symbols when updating PCB. 9 x 3 mm rectangular same-layer zone-fill keepout around the default lettering. Refill zones after placement. Resize the keepout if enlarging the lettering or using more than two year digits. Decorative copper with no net or pads; keep clear of tracks and pads.")
+		(descr "CJH signature with automatic year, masked front copper")
 		(tags "CJH signature sign off year copper covered soldermask artwork")
 		(property "Reference" "SIGN1"
 			(at 0 -2 90)
@@ -2002,7 +2002,7 @@
 		(layer "F.Cu")
 		(uuid "c0a728d7-4ad9-47f6-80f2-445898c40e3c")
 		(at 170.096341 96.999703 90)
-		(descr "Loann Boudin (loboat) PCB Business Card With NFC printed antenna, adapted from NXP Class 4. Original Eagle package 25X48MM_NFC_ANTENNA; nominal 48 x 25 mm centerline envelope, 5 turns, 0.30 mm trace / 0.30 mm straight-turn gap. Original coil geometry, P$1 surface terminal and P$2 plated 0.30 mm hole preserved. P$1 has no solder mask opening; P$2 is tented on both sides. Route inner terminal P$2 on the back layer. The entire winding is an F.Cu-only custom pad P$2 with original line/arc primitives and unchanged copper geometry. KiCad net tie models the DC-continuous coil; no stencil paste or assembled component. F.Cu winding keepouts prohibit tracks, vias and zone fill over the turns, with 0.20 mm nominal copper margin and terminal access openings; B.Cu crossover routing remains available. Source claims 2.75 uH, not measured here; tune on the final PCB. Converted from Eagle to KiCad; project license CC BY-NC-SA 4.0. https://www.instructables.com/PCB-Business-Card-With-NFC/")
+		(descr "Loann Boudin NFC antenna, 48x25 mm, 5 turns; Eagle conversion, CC BY-NC-SA 4.0")
 		(tags "NFC RFID antenna coil loop loboat Loann Boudin Class4 48x25mm 5turns")
 		(property "Reference" "L1"
 			(at 0 0 90)
@@ -2055,7 +2055,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "7314bfbc-d58e-4e91-b7c7-5c923cf6dfab")
+			(uuid "f3713f54-0d52-4755-af72-da7dae0faf0f")
 			(effects
 				(font
 					(size 1 1)
@@ -2068,7 +2068,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "8da7fa12-3d36-4cd9-836f-8c17ac409c6c")
+			(uuid "7002c448-7278-4629-a23f-99dc2078420d")
 			(effects
 				(font
 					(size 1 1)
@@ -2081,7 +2081,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "2f18e1ab-6373-4a20-8379-b6335a6d48a9")
+			(uuid "e8bfa7ef-0f9d-40a5-82f7-15e533c0d429")
 			(effects
 				(font
 					(size 1 1)
@@ -2894,7 +2894,7 @@
 		(layer "F.Cu")
 		(uuid "c2347a52-069c-4e99-8deb-2d932edafc31")
 		(at 107.600573 91.825183 90)
-		(descr "Gift-wrap variant of LanternLift; Making light work of hard problems. Two perpendicular strings wrap the sides and underside of the unchanged irregular stone. Hidden rear returns are clipped using a consistent planar-faced 3D model. 52x40 mm canvas; origin is separate LED center; M1 balloon lantern around the LED: F.SilkS envelope and gores, bare-FR4 flame window above the LED (F.Mask opening with no copper, copper keepout on F.Cu and B.Cu), tinned throat ring, and an unnumbered plated 0.3 mm crown vent. Remove D1's own silkscreen outline and hide its reference so they do not print over the flame. F.SilkS engraving, covered F.Cu facets, exposed F.Cu plus F.Mask strings. One unnumbered plated crown-vent pad; no electrical nets or paste. Copper keepouts 0.25 mm; review antenna isolation at placement. Sources: artwork/lantern-lift-gift-wrap-preview.svg, artwork/lantern-lift-gift-wrap-copper.svg, artwork/lantern-lift-gift-wrap-silkscreen.svg and artwork/lantern-lift-gift-wrap-mask-openings.svg. Edit PHRASE in the schematic symbol, then Update PCB from Schematic with Update footprint fields from symbols enabled.")
+		(descr "Lantern lifting wrapped stone, front silkscreen and copper; separate LED")
 		(tags "lantern lift stone light hard problems artwork silver masked copper")
 		(property "Reference" "ART1"
 			(at 0 -4.5 90)
@@ -7356,7 +7356,7 @@
 		(layer "B.Cu")
 		(uuid "082b02a3-7401-473d-a5c4-7dc504bcf0bb")
 		(at 180.6 80.6 180)
-		(descr "Editable contact block: name in Liberation Serif Bold, role and company on separate lines in Liberation Sans (an empty company field simply leaves its line blank), a 0.25 mm hairline underline, then email, phone and web in Liberation Mono; left-aligned, lines stack downward from the name anchor. The vCard QR is a separate board-level barcode that pulls these fields through INFO1:FIELD cross-references (for example INFO1:CONTACT_NAME inside the barcode text), so it can be placed anywhere; CONTACT_WEB is display text, CONTACT_WEB_QR is the URL encoded in the QR; no pads")
+		(descr "Editable contact details on front silkscreen")
 		(tags "contact business card name role company email phone website silkscreen vCard")
 		(property "Reference" "INFO1"
 			(at 0 3 0)
@@ -8714,15 +8714,15 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "business-card:CH_Logo_20mm_SilkScreen"
+	(footprint "business-card:CH_Logo_20mm_Copper"
 		(layer "B.Cu")
 		(uuid "1540865e-9549-4d7a-b242-ef50a8692fd0")
 		(at 112.55 80.24 180)
-		(descr "CH monogram from ch-logo-option-01.svg; 20 mm artwork width, 15.483871 mm height; filled front silkscreen")
-		(tags "CH monogram logo silkscreen")
+		(descr "CH monogram, 20 mm wide, exposed front copper")
+		(tags "CH monogram logo copper exposed soldermask")
 		(property "Reference" "LOGO1"
 			(at 0 9.241935 0)
-			(layer "B.SilkS")
+			(layer "B.Fab")
 			(hide yes)
 			(uuid "07a45542-0e34-439b-b9f5-010c53898f63")
 			(effects
@@ -8805,7 +8805,7 @@
 				(type solid)
 			)
 			(fill yes)
-			(layer "B.SilkS")
+			(layer "B.Cu")
 			(uuid "307d7b41-ff4a-4e76-bad4-902f3ef001b7")
 		)
 		(fp_poly
@@ -8835,8 +8835,95 @@
 				(type solid)
 			)
 			(fill yes)
-			(layer "B.SilkS")
+			(layer "B.Cu")
 			(uuid "858cd434-e033-4733-b8c8-1a773f674e18")
+		)
+		(fp_poly
+			(pts
+				(xy 0.799439 7.741935) (xy 0.827489 7.73913) (xy 0.85554 7.730715) (xy 0.88359 7.71669) (xy 0.911641 7.697055)
+				(xy 3.520337 5.587658) (xy 3.544881 5.562412) (xy 3.562412 5.534362) (xy 3.572931 5.503506) (xy 3.576438 5.469846)
+				(xy 3.576438 0.897616) (xy 7.279102 0.897616) (xy 7.279102 4.670407) (xy 7.28068 4.698852) (xy 7.285414 4.721073)
+				(xy 7.293303 4.73707) (xy 7.304348 4.746844) (xy 7.318548 4.750394) (xy 7.335905 4.747721) (xy 7.356417 4.738824)
+				(xy 7.380084 4.723703) (xy 9.943899 2.86115) (xy 9.968443 2.838359) (xy 9.985975 2.812062) (xy 9.996494 2.782258)
+				(xy 10 2.748948) (xy 10 -5.441795) (xy 9.996494 -5.475105) (xy 9.985975 -5.504909) (xy 9.968443 -5.531206)
+				(xy 9.943899 -5.553997) (xy 7.380084 -7.495091) (xy 7.356417 -7.51087) (xy 7.335905 -7.520337) (xy 7.318548 -7.523492)
+				(xy 7.304348 -7.520337) (xy 7.293303 -7.51087) (xy 7.285414 -7.495091) (xy 7.28068 -7.473001) (xy 7.279102 -7.4446)
+				(xy 7.279102 -1.12202) (xy 3.576438 -1.12202) (xy 3.576438 -5.497896) (xy 3.572931 -5.531381) (xy 3.562412 -5.561711)
+				(xy 3.544881 -5.588885) (xy 3.520337 -5.612903) (xy 0.841515 -7.69425) (xy 0.822833 -7.708089) (xy 0.805356 -7.719451)
+				(xy 0.789084 -7.728338) (xy 0.774018 -7.734748) (xy 0.760157 -7.738681) (xy 0.747502 -7.740138)
+				(xy 0.736051 -7.739119) (xy 0.725806 -7.735624) (xy 0.716767 -7.729652) (xy 0.708932 -7.721204)
+				(xy 0.702303 -7.71028) (xy 0.696879 -7.696879) (xy 0.692661 -7.681002) (xy 0.689648 -7.662649) (xy 0.68784 -7.641819)
+				(xy 0.687237 -7.618513) (xy 0.687237 7.629734) (xy 0.68899 7.656031) (xy 0.69425 7.678822) (xy 0.703015 7.698107)
+				(xy 0.715288 7.713885) (xy 0.731066 7.726157) (xy 0.750351 7.734923) (xy 0.773142 7.740182) (xy 0.799439 7.741935)
+			)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill yes)
+			(layer "B.Mask")
+			(uuid "77353f5a-c283-4235-a1eb-21171d4e53e7")
+		)
+		(fp_poly
+			(pts
+				(xy -4.656381 7.741935) (xy -0.771388 7.741935) (xy -0.751665 7.740621) (xy -0.734572 7.736676)
+				(xy -0.720109 7.730102) (xy -0.708275 7.720898) (xy -0.699071 7.709064) (xy -0.692496 7.6946) (xy -0.688552 7.677507)
+				(xy -0.687237 7.657784) (xy -0.687237 6.690042) (xy -0.688157 6.672993) (xy -0.690919 6.656907)
+				(xy -0.695521 6.641786) (xy -0.701964 6.62763) (xy -0.710247 6.614437) (xy -0.720372 6.602209) (xy -0.732337 6.590945)
+				(xy -0.746143 6.580645) (xy -7.023843 2.31136) (xy -7.037649 2.301061) (xy -7.049614 2.289797) (xy -7.059739 2.277568)
+				(xy -7.068022 2.264376) (xy -7.074465 2.250219) (xy -7.079067 2.235098) (xy -7.081829 2.219013)
+				(xy -7.082749 2.201964) (xy -7.082749 -2.356241) (xy -7.081829 -2.373291) (xy -7.079067 -2.389376)
+				(xy -7.074465 -2.404497) (xy -7.068022 -2.418654) (xy -7.059739 -2.431846) (xy -7.049614 -2.444074)
+				(xy -7.037649 -2.455338) (xy -7.023843 -2.465638) (xy -0.746143 -6.720898) (xy -0.732337 -6.731197)
+				(xy -0.720372 -6.742461) (xy -0.710247 -6.75469) (xy -0.701964 -6.767882) (xy -0.695521 -6.782039)
+				(xy -0.690919 -6.79716) (xy -0.688157 -6.813245) (xy -0.687237 -6.830295) (xy -0.687237 -7.657784)
+				(xy -0.688552 -7.677507) (xy -0.692496 -7.6946) (xy -0.699071 -7.709064) (xy -0.708275 -7.720898)
+				(xy -0.720109 -7.730102) (xy -0.734572 -7.736676) (xy -0.751665 -7.740621) (xy -0.771388 -7.741935)
+				(xy -4.57223 -7.741935) (xy -4.606417 -7.739481) (xy -4.63885 -7.732118) (xy -4.66953 -7.719846)
+				(xy -4.698457 -7.702665) (xy -9.941094 -3.98317) (xy -9.9549 -3.972212) (xy -9.966865 -3.960379)
+				(xy -9.97699 -3.947668) (xy -9.985273 -3.934081) (xy -9.991716 -3.919618) (xy -9.996318 -3.904278)
+				(xy -9.99908 -3.888061) (xy -10 -3.870968) (xy -10 3.604488) (xy -9.996494 3.637798) (xy -9.985975 3.667602)
+				(xy -9.968443 3.693899) (xy -9.943899 3.71669) (xy -4.782609 7.69986) (xy -4.753682 7.718268) (xy -4.723001 7.731417)
+				(xy -4.690568 7.739306) (xy -4.656381 7.741935)
+			)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill yes)
+			(layer "B.Mask")
+			(uuid "69aaf3e1-8af7-4aeb-8693-5774806a5918")
+		)
+		(zone
+			(layer "B.Cu")
+			(uuid "e96eb94b-60c8-45eb-a0d9-2e16b0f1529a")
+			(name "CH logo copper clearance")
+			(hatch edge 0.5)
+			(connect_pads
+				(clearance 0)
+			)
+			(min_thickness 0.25)
+			(keepout
+				(tracks not_allowed)
+				(vias not_allowed)
+				(pads not_allowed)
+				(copperpour not_allowed)
+				(footprints allowed)
+			)
+			(placement
+				(enabled no)
+				(sheetname "")
+			)
+			(fill
+				(thermal_gap 0.3)
+				(thermal_bridge_width 0.3)
+				(island_removal_mode 0)
+			)
+			(polygon
+				(pts
+					(xy 122.8 72.248065) (xy 102.3 72.248065) (xy 102.3 88.231935) (xy 122.8 88.231935)
+				)
+			)
 		)
 		(embedded_fonts no)
 	)
