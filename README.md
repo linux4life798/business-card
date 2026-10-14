@@ -1,4 +1,4 @@
-# PCB Business Card
+# PCB Business Card with NFC
 
 A thin, wallet-size PCB business card combining printed contact details, a vCard
 QR code, custom copper and silkscreen artwork, and passive NFC.
