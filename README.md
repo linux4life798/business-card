@@ -3,6 +3,13 @@
 A thin, wallet-size PCB business card combining printed contact details, a vCard
 QR code, custom copper and silkscreen artwork, and passive NFC.
 
+<p>
+  <img src="images/business-card-front.png" width="30%" alt="KiCad render of the card's front, showing the lantern artwork, LED, circuitry, and NFC antenna">
+  <img src="images/business-card-back.png" width="68%" alt="KiCad render of the card's back, showing contact details, CH logo, and vCard QR code">
+</p>
+
+*KiCad 3D renders of the front and back, with gold on exposed copper.*
+
 The design uses an NXP NT3H2111W0FHKH (NTAG I2C Plus) and a printed antenna for
 tap-to-share contact information. It is designed to harvest energy from the NFC
 reader's field to illuminate an LED, with no onboard battery or microcontroller.
