@@ -8,6 +8,7 @@
 		(title "Business Card")
 		(date "2026-10-05")
 		(rev "1")
+		(comment 1 "Author: Craig Hesling")
 	)
 	(lib_symbols
 		(symbol "Connector:TC2030"
