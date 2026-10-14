@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52mm" height="48mm" viewBox="0 0 52 48">
+<title>Lighthouse — F.Cu</title>
+<desc>Editable simplified lighthouse artwork for F.Cu; black marks on transparent background. Common 52 x 48 mm canvas; footprint origin/LED center is SVG (34,9) mm. No embedded bitmap or fonts. Minimum stroke 0.35 mm; intentional line junctions are connected. LED clear area is 4 x 2.6 mm centered at (34,9). Copper stays beneath solder mask: do not add F.Mask or F.Paste apertures. Copper requires placement and NFC tuning review.</desc>
+<g id="F-Cu" data-kicad-layer="F.Cu">
+<path id="copper-roof-highlight" d="M 31.50000,6.91667 C 32.04167,6.25000 32.95833,5.66667 33.58333,5.50000" fill="none" stroke="#000000" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="copper-collar" d="M 31.16667,15.41667 C 32.66667,14.95833 35.70833,14.95833 37.08333,15.45833" fill="none" stroke="#000000" stroke-width="0.85" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="copper-left-upper" d="M 31.01250,16.66667 L 30.66667,20.70833" fill="none" stroke="#000000" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="copper-left-middle" d="M 30.37500,23.91667 L 29.91667,28.16667" fill="none" stroke="#000000" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="copper-left-lower" d="M 29.62500,31.87500 L 29.37500,35.00000" fill="none" stroke="#000000" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="copper-upper-band" d="M 31.54167,22.16667 C 33.16667,21.54167 35.45833,21.50000 37.41667,21.87500" fill="none" stroke="#000000" stroke-width="0.85" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="copper-lower-band" d="M 31.33333,30.29167 C 33.54167,29.45833 35.66667,29.91667 38.08333,30.25000" fill="none" stroke="#000000" stroke-width="0.85" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="copper-rock-left" d="M 26.29167,38.75000 L 25.16667,39.58333 L 24.08333,40.91667" fill="none" stroke="#000000" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="copper-rock-center" d="M 28.50000,37.66667 L 30.20833,38.62500 L 29.25000,40.00000" fill="none" stroke="#000000" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="copper-rock-right" d="M 34.20833,39.41667 L 36.08333,38.16667 L 38.58333,38.79167" fill="none" stroke="#000000" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

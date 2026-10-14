@@ -3,8 +3,8 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(descr "Editable contact information with a native vCard 4.0 QR code; 25 mm code with 3 mm quiet margins, knockout for light silkscreen on dark soldermask; CONTACT_WEB is display text, CONTACT_WEB_QR is the full URL encoded in the QR; use single-line vCard-safe text; no pads")
-	(tags "contact business card name email phone website silkscreen vCard QR code")
+	(descr "Editable contact details on front silkscreen")
+	(tags "contact business card name role company email phone website silkscreen vCard")
 	(property "Reference" "INFO**"
 		(at 0 -3 0)
 		(layer "F.Fab")
@@ -63,40 +63,85 @@
 	(fp_text user "${CONTACT_NAME}"
 		(at 0 0 0)
 		(layer "F.SilkS")
-		(effects (font (size 2 2) (thickness 0.3)) (justify left))
+		(uuid "6257352a-a6c4-421f-b238-1614fcc8a2c2")
+		(effects
+			(font
+				(face "Liberation Serif")
+				(size 3.7 3.7)
+				(bold yes)
+			)
+			(justify left)
+		)
 	)
 	(fp_text user "${CONTACT_ROLE}"
-		(at 0 3 0)
+		(at 0 5.4 0)
 		(layer "F.SilkS")
-		(effects (font (size 1.2 1.2) (thickness 0.18)) (justify left))
+		(uuid "18afd235-289d-4de6-b2cf-64db226a6fde")
+		(effects
+			(font
+				(face "Liberation Sans")
+				(size 1.5 1.5)
+			)
+			(justify left)
+		)
+	)
+	(fp_text user "${CONTACT_COMPANY}"
+		(at 0 8.1 0)
+		(layer "F.SilkS")
+		(uuid "dd71dcca-c752-450c-9fc6-f4919c4aa17a")
+		(effects
+			(font
+				(face "Liberation Sans")
+				(size 1.5 1.5)
+			)
+			(justify left)
+		)
+	)
+	(fp_line
+		(start 0 11.3)
+		(end 26 11.3)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8fa40feb-ca3e-4757-bdb1-bb5bc10e2f5d")
 	)
 	(fp_text user "${CONTACT_EMAIL}"
-		(at 0 6 0)
+		(at 0 21.7 0)
 		(layer "F.SilkS")
-		(effects (font (size 1.1 1.1) (thickness 0.16)) (justify left))
+		(uuid "a7b47bda-84a0-4a8d-9a86-d6e675a64784")
+		(effects
+			(font
+				(face "Liberation Mono")
+				(size 1.4 1.4)
+			)
+			(justify left)
+		)
 	)
 	(fp_text user "${CONTACT_PHONE}"
-		(at 0 8.5 0)
+		(at 0 25.3 0)
 		(layer "F.SilkS")
-		(effects (font (size 1.1 1.1) (thickness 0.16)) (justify left))
+		(uuid "0343c778-1a39-4d07-a1e4-b0afbfae4ddd")
+		(effects
+			(font
+				(face "Liberation Mono")
+				(size 1.4 1.4)
+			)
+			(justify left)
+		)
 	)
 	(fp_text user "${CONTACT_WEB}"
-		(at 0 11 0)
+		(at 0 28.9 0)
 		(layer "F.SilkS")
-		(effects (font (size 1.1 1.1) (thickness 0.16)) (justify left))
-	)
-	(barcode
-		(at -17 5.5 0)
-		(layer "F.SilkS")
-		(size 25 25)
-		(text "BEGIN:VCARD\r\nVERSION:4.0\r\nFN:${CONTACT_NAME}\r\nORG:${CONTACT_COMPANY}\r\nTITLE:${CONTACT_ROLE}\r\nTEL;VALUE=text:${CONTACT_PHONE}\r\nEMAIL:${CONTACT_EMAIL}\r\nURL:${CONTACT_WEB_QR}\r\nEND:VCARD\r\n")
-		(text_height 1.27)
-		(type qr)
-		(ecc_level M)
-		(hide yes)
-		(knockout yes)
-		(margins 3 3)
-		(uuid "1d3f3aa2-07d0-43cf-8200-394d751cbf6a")
+		(uuid "c3344de7-4b2c-4c77-a04c-b8e0452bc57a")
+		(effects
+			(font
+				(face "Liberation Mono")
+				(size 1.4 1.4)
+			)
+			(justify left)
+		)
 	)
 	(embedded_fonts no)
 )

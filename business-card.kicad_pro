@@ -210,7 +210,10 @@
         }
       ],
       "track_widths": [
-        0.0
+        0.0,
+        0.15,
+        0.2,
+        0.3
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -692,6 +695,14 @@
     "meta": {
       "version": 1
     },
+    "ngspice": {
+      "fix_include_paths": true,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 4,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "reuse_designators": true,
@@ -704,7 +715,7 @@
         "uuid": "d47d11a5-7f30-4f5f-a335-6efc49b156b4"
       }
     ],
-    "used_designators": "#FLG1-2,#PWR1-2,R1,D1,BT1,LOGO1-2",
+    "used_designators": "BT1,LOGO1-3,L1-2,INFO1-2,AE1,C1-2,D1-2,U1,TP1-5,R1-4,#PWR1-10,#FLG1-3,J1,SIGN1,ART1",
     "variants": []
   },
   "sheets": [
