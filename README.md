@@ -10,13 +10,15 @@ QR code, custom copper and silkscreen artwork, and passive NFC.
 
 *KiCad 3D renders of the front and back, with gold on exposed copper.*
 
+## Schematic
+
 The design uses an NXP NT3H2111W0FHKH (NTAG I2C Plus) and a printed antenna for
 tap-to-share contact information. It is designed to harvest energy from the NFC
 reader's field to illuminate an LED, with no onboard battery or microcontroller.
 
 [![KiCad export of the main schematic page](docs/business-card-schematic.svg)](docs/business-card-schematic.pdf)
 
-*KiCad schematic export; click for the full-page PDF.*
+## Project files
 
 Open [business-card.kicad_pro](business-card.kicad_pro) in **KiCad 10** to explore
 the design:
@@ -29,5 +31,6 @@ the design:
 - [artwork/](artwork/) — SVG artwork and previews used to generate footprints.
 
 If adapting the card, replace the printed contact details, QR payload, and NFC
-contents with your own. Antenna tuning, NFC read range, and LED brightness require
-validation on assembled hardware.
+contents with your own.
+Antenna tuning, NFC read range, and LED brightness require validation on
+assembled hardware.
