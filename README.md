@@ -14,6 +14,10 @@ The design uses an NXP NT3H2111W0FHKH (NTAG I2C Plus) and a printed antenna for
 tap-to-share contact information. It is designed to harvest energy from the NFC
 reader's field to illuminate an LED, with no onboard battery or microcontroller.
 
+[![KiCad export of the main schematic page](images/business-card-schematic.svg)](images/business-card-schematic.pdf)
+
+*KiCad schematic export; click for the full-page PDF.*
+
 Open [business-card.kicad_pro](business-card.kicad_pro) in **KiCad 10** to explore
 the design:
 
@@ -27,3 +31,13 @@ the design:
 If adapting the card, replace the printed contact details, QR payload, and NFC
 contents with your own. Antenna tuning, NFC read range, and LED brightness require
 validation on assembled hardware.
+
+Regenerate the README previews from the saved design with Python 3, KiCad 10,
+and KiCad's standard 3D model libraries:
+
+```sh
+python3 images/render-readme.py
+```
+
+Use `--only schematic` to refresh just the SVG and PDF, or `--only pcb` for the
+two 3D renders.
