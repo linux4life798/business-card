@@ -1,0 +1,74 @@
+(version 1)
+
+# JLCPCB low-cost bare PCB: 2 layers, 0.6 mm FR-4, 1 oz, black mask,
+# lead-free HASL. Sources checked 2026-10-13:
+# https://jlcpcb.com/capabilities/pcb-capabilities
+# https://jlcpcb.com/blog/custom-pcb-cost
+# https://jlcpcb.com/help/article/in-what-cases-will-there-be-charged-extra
+# https://jlcpcb.com/capabilities/pcb-assembly-capabilities
+#
+# Board Setup stores the ordinary constraints: 0.127 mm trace/space,
+# 0.30/0.60 mm drill/via, 0.15 mm via annulus, 0.20 mm routed-edge and
+# hole-to-copper clearance, 0.20 mm via hole spacing, and 1.0/0.15 mm
+# silkscreen height/stroke with 0.15 mm silk clearance. The trace and via
+# choices are conservative economy guidance, not absolute capability limits.
+# Default routing remains 0.20 mm trace/clearance and 0.60/0.30 mm vias.
+#
+# Mask expansion remains 0; minimum black-mask web is 0.13 mm and mask
+# opening to unrelated copper is 0.09 mm. Footprint mask overrides remain.
+# JLCPCB specifies 0.13 mm pad spacing; using that as the remaining web
+# is conservative where a footprint has positive mask expansion.
+# KiCad merges openings closer than the minimum web and reports bridges;
+# no bridge exclusions are enabled. Check final Gerbers and fab CAM review.
+# 0.6 mm finished thickness tolerance is +/-0.1 mm. The nominal stackup is
+# not an impedance-controlled laminate specification. Economic PCBA requires
+# 0.8-1.6 mm thickness; this profile is for bare-board fabrication.
+#
+# Geometry inside custom copper pads / filled artwork, same-net trace gaps,
+# coil turn gaps, and minimum features inside filled silk polygons require
+# Gerber/DFM review; ordinary trace-width rules do not fully inspect them.
+# Masked coils need 0.15/0.15 mm width/spacing; exposed coils need
+# 0.25/0.25 mm and ENIG. Preserve the saved masked antenna geometry.
+
+(rule "JLCPCB standard through vias only"
+  (constraint disallow blind_via buried_via micro_via))
+
+# Component PTH annuli have a different limit from vias: 0.18 mm absolute,
+# 0.20 mm nominal minimum and 0.25 mm recommended in JLCPCB's table.
+(rule "JLCPCB PTH annular ring and hole clearance"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'Through-hole'")
+  (constraint annular_width (min 0.18mm))
+  (constraint hole_clearance (min 0.28mm)))
+
+# Use the larger pad-hole spacing when either drilled object is a pad.
+(rule "JLCPCB pad hole spacing"
+  (condition "A.Type == 'Pad'")
+  (constraint hole_to_hole (min 0.45mm)))
+
+(rule "JLCPCB round NPTH minimum"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'NPTH, mechanical' && A.Hole_Size_X == A.Hole_Size_Y")
+  (constraint hole_size (min 0.5mm)))
+
+(rule "JLCPCB non-plated slot minimum"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'NPTH, mechanical' && A.Hole_Size_X != A.Hole_Size_Y")
+  (constraint hole_size (min 1.0mm)))
+
+(rule "JLCPCB plated slot minimum"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'Through-hole' && A.Hole_Size_X != A.Hole_Size_Y")
+  (constraint hole_size (min 0.5mm)))
+
+(rule "JLCPCB SMD pad spacing"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Pad_Type == 'SMD' && B.Pad_Type == 'SMD'")
+  (constraint clearance (min 0.15mm)))
+
+# Only copper pads, not the separate paste-only apertures in U1.
+(rule "JLCPCB minimum SMD copper pad 0.25 mm"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'SMD' && (A.existsOnLayer('F.Cu') || A.existsOnLayer('B.Cu'))")
+  (constraint assertion "A.Size_X >= 0.25mm && A.Size_Y >= 0.25mm"))
+
+# Stroke checks for silk drawings complement text rules. Zero-stroke filled
+# logos and QR modules need separate feature-size inspection.
+(rule "JLCPCB silkscreen line width 0.15 mm"
+  (condition "A.Type == 'Graphic' && (A.Layer == 'F.SilkS' || A.Layer == 'B.SilkS') && A.Line_Width > 0mm")
+  (constraint assertion "A.Line_Width >= 0.15mm")
+  (severity warning))
