@@ -22,7 +22,7 @@ the design:
 - [business-card.kicad_sym](business-card.kicad_sym) — project symbols.
 - [business-card.pretty/](business-card.pretty/) — project footprints.
 - [business-card.3dshapes/](business-card.3dshapes/) — project 3D models.
-- [artwork/](artwork/) — SVG artwork and previews.
+- [artwork/](artwork/) — SVG artwork and previews used to generate footprints.
 
 If adapting the card, replace the printed contact details, QR payload, and NFC
 contents with your own. Antenna tuning, NFC read range, and LED brightness require
