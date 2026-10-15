@@ -3216,6 +3216,16 @@
 		)
 		(uuid "c2d0a0ee-cb38-4548-bd88-21d0af6dc048")
 	)
+	(text "Minimal NFC and LED Circuit"
+		(exclude_from_sim no)
+		(at 133.604 22.606 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "09996a71-612b-43da-b74d-27ed4b6f3d67")
+	)
 	(text "C1 originally 1.5 pF.\n0.6 mm PCB: 5.1 pF prototype (~14.485 MHz).\n0.8 mm PCB: calculated C1 ~4.8 pF for 14.5 MHz;\n4.7 pF is the nearest standard E24 value.\nWith 5.1 pF, 0.8 mm resonance is ~14.465 MHz.\nAssumes nominal 50 pF chip; same copper, FR4 and mask.\nVerify tuning on assembled PCB with LED load."
 		(exclude_from_sim no)
 		(at 77.47 65.405 0)
@@ -3226,16 +3236,6 @@
 			(justify left)
 		)
 		(uuid "09b651b6-e6f9-42a5-a7be-d6a7e8ca8720")
-	)
-	(text "Minimal NFC and LED Circuit"
-		(exclude_from_sim no)
-		(at 133.604 22.606 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "09996a71-612b-43da-b74d-27ed4b6f3d67")
 	)
 	(text "Wired for the following devices:"
 		(exclude_from_sim no)

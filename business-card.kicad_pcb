@@ -145,6 +145,13 @@
 			(outputdirectory "")
 		)
 	)
+	(property "PROJ_CONTACT_COMPANY" "Your Company")
+	(property "PROJ_CONTACT_EMAIL" "you@example.com")
+	(property "PROJ_CONTACT_NAME" "Your Name")
+	(property "PROJ_CONTACT_PHONE" "+1 202-555-0123")
+	(property "PROJ_CONTACT_ROLE" "Your Role")
+	(property "PROJ_CONTACT_WEB" "example.com")
+	(property "PROJ_CONTACT_WEB_QR" "https://example.com")
 	(footprint "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical"
 		(layer "F.Cu")
 		(uuid "085bfe18-1461-4ed2-b1e7-75dfa6544f50")
@@ -454,7 +461,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "ad2c5758-8f06-42bb-9a64-d42518e5d3b2")
+			(uuid "200e2dab-2567-462e-856a-90814c5a6c55")
 			(effects
 				(font
 					(size 1 1)
@@ -467,7 +474,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "1cac9d1d-27a5-4d61-b0c3-f7a0faa924d4")
+			(uuid "ba100ce1-6111-4f0a-a0f2-71aad2de5c28")
 			(effects
 				(font
 					(size 1 1)
@@ -480,7 +487,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "1d38af39-3f1d-433a-b1a2-8d24d6769631")
+			(uuid "0756e5fc-5156-4f70-b0ba-3af9b4c86b0a")
 			(effects
 				(font
 					(size 1 1)
@@ -1006,7 +1013,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "95c0d243-f2ee-4e9b-8378-b88dd833db03")
+			(uuid "7e9a1647-ff33-4fe4-bb06-5ccd320252dc")
 			(effects
 				(font
 					(size 1 1)
@@ -1019,7 +1026,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "c26cff77-4e3b-491e-a6d9-cd5200fe39dc")
+			(uuid "87c966b6-3154-4300-94d2-27654744a93f")
 			(effects
 				(font
 					(size 1 1)
@@ -2057,7 +2064,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "f3713f54-0d52-4755-af72-da7dae0faf0f")
+			(uuid "66840b3f-80bb-42e1-b0ef-7ee3b742c0bd")
 			(effects
 				(font
 					(size 1 1)
@@ -2070,7 +2077,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "7002c448-7278-4629-a23f-99dc2078420d")
+			(uuid "ccef4846-93ad-4f65-97b8-9981bafdcd59")
 			(effects
 				(font
 					(size 1 1)
@@ -2083,7 +2090,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "e8bfa7ef-0f9d-40a5-82f7-15e533c0d429")
+			(uuid "34ba6514-8a03-4468-b575-f8db0003f51e")
 			(effects
 				(font
 					(size 1 1)
@@ -7412,7 +7419,7 @@
 				(justify mirror)
 			)
 		)
-		(property "CONTACT_NAME" "${PROJ_CONTACT_NAME}"
+		(property "CONTACT_NAME" "Your Name"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -7425,7 +7432,7 @@
 				(justify left mirror)
 			)
 		)
-		(property "CONTACT_COMPANY" "${PROJ_CONTACT_COMPANY}"
+		(property "CONTACT_COMPANY" "Your Company"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -7438,7 +7445,7 @@
 				(justify mirror)
 			)
 		)
-		(property "CONTACT_ROLE" "${PROJ_CONTACT_ROLE}"
+		(property "CONTACT_ROLE" "Your Role"
 			(at 0 -3 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -7451,7 +7458,7 @@
 				(justify left mirror)
 			)
 		)
-		(property "CONTACT_EMAIL" "${PROJ_CONTACT_EMAIL}"
+		(property "CONTACT_EMAIL" "you@example.com"
 			(at 0 -6 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -7464,7 +7471,7 @@
 				(justify left mirror)
 			)
 		)
-		(property "CONTACT_PHONE" "${PROJ_CONTACT_PHONE}"
+		(property "CONTACT_PHONE" "+1 202-555-0123"
 			(at 0 -8.5 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -7477,7 +7484,7 @@
 				(justify left mirror)
 			)
 		)
-		(property "CONTACT_WEB" "${PROJ_CONTACT_WEB}"
+		(property "CONTACT_WEB" "example.com"
 			(at 0 -11 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -7490,7 +7497,7 @@
 				(justify left mirror)
 			)
 		)
-		(property "CONTACT_WEB_QR" "${PROJ_CONTACT_WEB_QR}"
+		(property "CONTACT_WEB_QR" "https://example.com"
 			(at 0 -11 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -8715,9 +8722,8 @@
 				)
 			)
 		)
-		(embedded_fonts no)
 		(barcode
-			(at 117.6 106.5 0)
+			(at 117.6 106.5 360)
 			(layer "B.SilkS")
 			(size 23 23)
 			(text "BEGIN:VCARD\r\nVERSION:4.0\r\nFN:${PROJ_CONTACT_NAME}\r\nORG:${PROJ_CONTACT_COMPANY}\r\nTITLE:${PROJ_CONTACT_ROLE}\r\nTEL;VALUE=text:${PROJ_CONTACT_PHONE}\r\nEMAIL:${PROJ_CONTACT_EMAIL}\r\nURL:${PROJ_CONTACT_WEB_QR}\r\nEND:VCARD\r\n")
@@ -8729,6 +8735,7 @@
 			(margins 2.5 2.5)
 			(uuid "9f0308b0-55c8-49f3-aa30-a6297274c4ef")
 		)
+		(embedded_fonts no)
 	)
 	(footprint "business-card:CH_Logo_20mm_Copper"
 		(layer "B.Cu")
