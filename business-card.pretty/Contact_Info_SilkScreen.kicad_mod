@@ -17,43 +17,43 @@
 		(hide yes)
 		(effects (font (size 1 1) (thickness 0.15)) (justify left))
 	)
-	(property "CONTACT_NAME" "Your Name"
+	(property "CONTACT_NAME" "${PROJ_CONTACT_NAME}"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
 		(effects (font (size 1 1) (thickness 0.15)) (justify left))
 	)
-	(property "CONTACT_COMPANY" "Your Company"
+	(property "CONTACT_COMPANY" "${PROJ_CONTACT_COMPANY}"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
 		(effects (font (size 1 1) (thickness 0.15)))
 	)
-	(property "CONTACT_ROLE" "Your Role"
+	(property "CONTACT_ROLE" "${PROJ_CONTACT_ROLE}"
 		(at 0 3 0)
 		(layer "F.Fab")
 		(hide yes)
 		(effects (font (size 1 1) (thickness 0.15)) (justify left))
 	)
-	(property "CONTACT_EMAIL" "you@example.com"
+	(property "CONTACT_EMAIL" "${PROJ_CONTACT_EMAIL}"
 		(at 0 6 0)
 		(layer "F.Fab")
 		(hide yes)
 		(effects (font (size 1 1) (thickness 0.15)) (justify left))
 	)
-	(property "CONTACT_PHONE" "+1 202-555-0123"
+	(property "CONTACT_PHONE" "${PROJ_CONTACT_PHONE}"
 		(at 0 8.5 0)
 		(layer "F.Fab")
 		(hide yes)
 		(effects (font (size 1 1) (thickness 0.15)) (justify left))
 	)
-	(property "CONTACT_WEB" "example.com"
+	(property "CONTACT_WEB" "${PROJ_CONTACT_WEB}"
 		(at 0 11 0)
 		(layer "F.Fab")
 		(hide yes)
 		(effects (font (size 1 1) (thickness 0.15)) (justify left))
 	)
-	(property "CONTACT_WEB_QR" "https://${CONTACT_WEB}"
+	(property "CONTACT_WEB_QR" "${PROJ_CONTACT_WEB_QR}"
 		(at 0 11 0)
 		(layer "F.Fab")
 		(hide yes)

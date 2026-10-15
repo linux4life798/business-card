@@ -1680,43 +1680,43 @@
 			(hide yes)
 			(effects (font (size 1.27 1.27)) (justify left))
 		)
-		(property "CONTACT_NAME" "Your Name"
+		(property "CONTACT_NAME" "${PROJ_CONTACT_NAME}"
 			(at -22.86 6.35 0)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects (font (size 1.778 1.778)) (justify left))
 		)
-		(property "CONTACT_COMPANY" "Your Company"
+		(property "CONTACT_COMPANY" "${PROJ_CONTACT_COMPANY}"
 			(at -22.86 2.54 0)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects (font (size 1.27 1.27)) (justify left))
 		)
-		(property "CONTACT_ROLE" "Your Role"
+		(property "CONTACT_ROLE" "${PROJ_CONTACT_ROLE}"
 			(at -22.86 -1.27 0)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects (font (size 1.27 1.27)) (justify left))
 		)
-		(property "CONTACT_EMAIL" "you@example.com"
+		(property "CONTACT_EMAIL" "${PROJ_CONTACT_EMAIL}"
 			(at -22.86 -6.35 0)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects (font (size 1.27 1.27)) (justify left))
 		)
-		(property "CONTACT_PHONE" "+1 202-555-0123"
+		(property "CONTACT_PHONE" "${PROJ_CONTACT_PHONE}"
 			(at -22.86 -10.16 0)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects (font (size 1.27 1.27)) (justify left))
 		)
-		(property "CONTACT_WEB" "example.com"
+		(property "CONTACT_WEB" "${PROJ_CONTACT_WEB}"
 			(at -22.86 -13.97 0)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects (font (size 1.27 1.27)) (justify left))
 		)
-		(property "CONTACT_WEB_QR" "https://${CONTACT_WEB}"
+		(property "CONTACT_WEB_QR" "${PROJ_CONTACT_WEB_QR}"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace yes)

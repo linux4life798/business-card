@@ -731,7 +731,15 @@
       "business-card"
     ]
   ],
-  "text_variables": {},
+  "text_variables": {
+    "PROJ_CONTACT_COMPANY": "Your Company",
+    "PROJ_CONTACT_EMAIL": "you@example.com",
+    "PROJ_CONTACT_NAME": "Your Name",
+    "PROJ_CONTACT_PHONE": "+1 202-555-0123",
+    "PROJ_CONTACT_ROLE": "Your Role",
+    "PROJ_CONTACT_WEB": "example.com",
+    "PROJ_CONTACT_WEB_QR": "https://example.com"
+  },
   "tuning_profiles": {
     "meta": {
       "version": 0
