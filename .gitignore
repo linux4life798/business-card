@@ -5,3 +5,9 @@ _autosave-*
 fp-info-cache
 ~*.lck
 *.kicad_prl
+
+# Private contact details and generated bundles.
+/.env
+/.env.*
+!/.env.example
+/output/

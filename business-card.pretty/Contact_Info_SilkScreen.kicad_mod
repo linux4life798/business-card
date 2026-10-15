@@ -17,43 +17,43 @@
 		(hide yes)
 		(effects (font (size 1 1) (thickness 0.15)) (justify left))
 	)
-	(property "CONTACT_NAME" "${PROJ_CONTACT_NAME}"
+	(property "CONTACT_NAME" "Your Name"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
 		(effects (font (size 1 1) (thickness 0.15)) (justify left))
 	)
-	(property "CONTACT_COMPANY" "${PROJ_CONTACT_COMPANY}"
+	(property "CONTACT_COMPANY" "Your Company"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
 		(effects (font (size 1 1) (thickness 0.15)))
 	)
-	(property "CONTACT_ROLE" "${PROJ_CONTACT_ROLE}"
+	(property "CONTACT_ROLE" "Your Role"
 		(at 0 3 0)
 		(layer "F.Fab")
 		(hide yes)
 		(effects (font (size 1 1) (thickness 0.15)) (justify left))
 	)
-	(property "CONTACT_EMAIL" "${PROJ_CONTACT_EMAIL}"
+	(property "CONTACT_EMAIL" "you@example.com"
 		(at 0 6 0)
 		(layer "F.Fab")
 		(hide yes)
 		(effects (font (size 1 1) (thickness 0.15)) (justify left))
 	)
-	(property "CONTACT_PHONE" "${PROJ_CONTACT_PHONE}"
+	(property "CONTACT_PHONE" "+1 202-555-0123"
 		(at 0 8.5 0)
 		(layer "F.Fab")
 		(hide yes)
 		(effects (font (size 1 1) (thickness 0.15)) (justify left))
 	)
-	(property "CONTACT_WEB" "${PROJ_CONTACT_WEB}"
+	(property "CONTACT_WEB" "example.com"
 		(at 0 11 0)
 		(layer "F.Fab")
 		(hide yes)
 		(effects (font (size 1 1) (thickness 0.15)) (justify left))
 	)
-	(property "CONTACT_WEB_QR" "${PROJ_CONTACT_WEB_QR}"
+	(property "CONTACT_WEB_QR" "https://example.com"
 		(at 0 11 0)
 		(layer "F.Fab")
 		(hide yes)
@@ -148,7 +148,7 @@
 		(at 63 25.9 0)
 		(layer "F.SilkS")
 		(size 23 23)
-		(text "BEGIN:VCARD\r\nVERSION:4.0\r\nFN:${PROJ_CONTACT_NAME}\r\nORG:${PROJ_CONTACT_COMPANY}\r\nTITLE:${PROJ_CONTACT_ROLE}\r\nTEL;VALUE=text:${PROJ_CONTACT_PHONE}\r\nEMAIL:${PROJ_CONTACT_EMAIL}\r\nURL:${PROJ_CONTACT_WEB_QR}\r\nEND:VCARD\r\n")
+		(text "BEGIN:VCARD\r\nVERSION:4.0\r\nFN:${CONTACT_NAME}\r\nORG:${CONTACT_COMPANY}\r\nTITLE:${CONTACT_ROLE}\r\nTEL;VALUE=text:${CONTACT_PHONE}\r\nEMAIL:${CONTACT_EMAIL}\r\nURL:${CONTACT_WEB_QR}\r\nEND:VCARD\r\n")
 		(text_height 1.27)
 		(type qr)
 		(ecc_level M)

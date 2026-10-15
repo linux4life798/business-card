@@ -1493,7 +1493,7 @@
 					(justify left)
 				)
 			)
-			(property "CONTACT_NAME" "${PROJ_CONTACT_NAME}"
+			(property "CONTACT_NAME" "Your Name"
 				(at -22.86 6.35 0)
 				(show_name no)
 				(do_not_autoplace yes)
@@ -1504,7 +1504,7 @@
 					(justify left)
 				)
 			)
-			(property "CONTACT_COMPANY" "${PROJ_CONTACT_COMPANY}"
+			(property "CONTACT_COMPANY" "Your Company"
 				(at -22.86 2.54 0)
 				(show_name no)
 				(do_not_autoplace yes)
@@ -1515,7 +1515,7 @@
 					(justify left)
 				)
 			)
-			(property "CONTACT_ROLE" "${PROJ_CONTACT_ROLE}"
+			(property "CONTACT_ROLE" "Your Role"
 				(at -22.86 -1.27 0)
 				(show_name no)
 				(do_not_autoplace yes)
@@ -1526,7 +1526,7 @@
 					(justify left)
 				)
 			)
-			(property "CONTACT_EMAIL" "${PROJ_CONTACT_EMAIL}"
+			(property "CONTACT_EMAIL" "you@example.com"
 				(at -22.86 -6.35 0)
 				(show_name no)
 				(do_not_autoplace yes)
@@ -1537,7 +1537,7 @@
 					(justify left)
 				)
 			)
-			(property "CONTACT_PHONE" "${PROJ_CONTACT_PHONE}"
+			(property "CONTACT_PHONE" "+1 202-555-0123"
 				(at -22.86 -10.16 0)
 				(show_name no)
 				(do_not_autoplace yes)
@@ -1548,7 +1548,7 @@
 					(justify left)
 				)
 			)
-			(property "CONTACT_WEB" "${PROJ_CONTACT_WEB}"
+			(property "CONTACT_WEB" "example.com"
 				(at -22.86 -13.97 0)
 				(show_name no)
 				(do_not_autoplace yes)
@@ -1559,7 +1559,7 @@
 					(justify left)
 				)
 			)
-			(property "CONTACT_WEB_QR" "${PROJ_CONTACT_WEB_QR}"
+			(property "CONTACT_WEB_QR" "https://example.com"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace yes)
@@ -3215,6 +3215,17 @@
 			(type none)
 		)
 		(uuid "c2d0a0ee-cb38-4548-bd88-21d0af6dc048")
+	)
+	(text "Edit INFO1's CONTACT_* fields.\nUpdate PCB from Schematic (F8), then\nsave and reopen the PCB to refresh the QR."
+		(exclude_from_sim no)
+		(at 76.2 168.91 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "7f922564-6253-41cc-a4a3-7f15fd953801")
 	)
 	(text "Minimal NFC and LED Circuit"
 		(exclude_from_sim no)
@@ -6368,7 +6379,7 @@
 				(justify left)
 			)
 		)
-		(property "CONTACT_NAME" "${PROJ_CONTACT_NAME}"
+		(property "CONTACT_NAME" "Your Name"
 			(at 21.59 175.26 0)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -6379,7 +6390,7 @@
 				(justify left)
 			)
 		)
-		(property "CONTACT_COMPANY" "${PROJ_CONTACT_COMPANY}"
+		(property "CONTACT_COMPANY" "Your Company"
 			(at 21.59 179.07 0)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -6390,7 +6401,7 @@
 				(justify left)
 			)
 		)
-		(property "CONTACT_ROLE" "${PROJ_CONTACT_ROLE}"
+		(property "CONTACT_ROLE" "Your Role"
 			(at 21.59 182.88 0)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -6401,7 +6412,7 @@
 				(justify left)
 			)
 		)
-		(property "CONTACT_EMAIL" "${PROJ_CONTACT_EMAIL}"
+		(property "CONTACT_EMAIL" "you@example.com"
 			(at 21.59 187.96 0)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -6412,7 +6423,7 @@
 				(justify left)
 			)
 		)
-		(property "CONTACT_PHONE" "${PROJ_CONTACT_PHONE}"
+		(property "CONTACT_PHONE" "+1 202-555-0123"
 			(at 21.59 191.77 0)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -6423,7 +6434,7 @@
 				(justify left)
 			)
 		)
-		(property "CONTACT_WEB" "${PROJ_CONTACT_WEB}"
+		(property "CONTACT_WEB" "example.com"
 			(at 21.59 195.58 0)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -6434,7 +6445,7 @@
 				(justify left)
 			)
 		)
-		(property "CONTACT_WEB_QR" "${PROJ_CONTACT_WEB_QR}"
+		(property "CONTACT_WEB_QR" "https://example.com"
 			(at 44.45 181.61 0)
 			(hide yes)
 			(show_name no)

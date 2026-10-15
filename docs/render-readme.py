@@ -31,6 +31,16 @@ def render_pcb(root, temporary):
     render_board = temporary / source.name
     render_board.write_text(board)
     shutil.copy2(root / "business-card.kicad_pro", temporary)
+    shutil.copy2(root / "business-card.kicad_dru", temporary)
+    # Save project variables into the temporary PCB before its QR is rendered.
+    # KiCad initializes barcode polygons before loading project variables.
+    subprocess.run(
+        ["kicad-cli", "pcb", "drc", "--refill-zones", "--save-board",
+         "--format", "json", "--output", str(temporary / "render-drc.json"),
+         str(render_board)],
+        cwd=root,
+        check=True,
+    )
     for side, options in views:
         subprocess.run(
             ["kicad-cli", "pcb", "render", "--output",
