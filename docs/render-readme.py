@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render README previews from the saved KiCad PCB and main schematic page."""
+"""Render previews from the saved KiCad project in the current directory."""
 
 import argparse
 from pathlib import Path
@@ -9,7 +9,7 @@ import subprocess
 import tempfile
 
 
-def render_pcb(root, temporary):
+def render_pcb(root: Path, temporary: Path) -> list[str]:
     source = root / "business-card.kicad_pcb"
     board, count = re.subn(
         r'\(copper_finish "[^"]*"\)',
@@ -31,16 +31,6 @@ def render_pcb(root, temporary):
     render_board = temporary / source.name
     render_board.write_text(board)
     shutil.copy2(root / "business-card.kicad_pro", temporary)
-    shutil.copy2(root / "business-card.kicad_dru", temporary)
-    # Save project variables into the temporary PCB before its QR is rendered.
-    # KiCad initializes barcode polygons before loading project variables.
-    subprocess.run(
-        ["kicad-cli", "pcb", "drc", "--refill-zones", "--save-board",
-         "--format", "json", "--output", str(temporary / "render-drc.json"),
-         str(render_board)],
-        cwd=root,
-        check=True,
-    )
     for side, options in views:
         subprocess.run(
             ["kicad-cli", "pcb", "render", "--output",
@@ -53,7 +43,7 @@ def render_pcb(root, temporary):
     return [f"business-card-{side}.png" for side, _ in views]
 
 
-def render_schematic(root, temporary):
+def render_schematic(root: Path, temporary: Path) -> list[str]:
     source = root / "business-card.kicad_sch"
     # Pin the built-in light theme, including its opaque background, so the
     # preview is independent of local preferences and readable in dark READMEs.
@@ -77,14 +67,14 @@ def render_schematic(root, temporary):
     return [svg, pdf]
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--only", choices=("all", "pcb", "schematic"), default="all",
         help="select previews to regenerate (default: all)",
     )
     args = parser.parse_args()
-    root = Path(__file__).resolve().parent.parent
+    root = Path.cwd()
     with tempfile.TemporaryDirectory(prefix="business-card-readme-") as directory:
         temporary = Path(directory)
         filenames = []
