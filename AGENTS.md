@@ -2,9 +2,12 @@
 
 Read [README.md](README.md) for the project overview and file locations.
 
+- Keep the project usable entirely through KiCad's GUI, including personalization, inspection, and export. Bundle portable custom libraries/assets and make steps clear to beginners; Python, `.env`, and Actions are optional conveniences.
+- Keep Python small, readable, and focused, with minimal options and outputs. Use modern parameter and return annotations, built-in collection types, and `|` unions; avoid clever abstractions and compressed code.
 - Keep changes scoped to the request and preserve unrelated work.
 - Respect library-only edits. Update the PCB's embedded footprints from the library only when propagation is intended, then save before rendering.
-- Keep the README minimal and consistent with the saved schematic and PCB. Update affected descriptions and links alongside design changes.
+- Make the README a concise welcome: what the project is, previews, and how to get started. Let users learn progressively: explain mechanisms as they become relevant, with links to deeper explanations. Keep design rationale, calculations, and history in separate notes so users can explore without needing to understand everything upfront.
+- Keep README descriptions and links consistent with the saved schematic and PCB, updating them alongside design changes.
 - Keep both PNGs and `render-readme.py` together in the flat, root-level `docs/` directory. Regenerate both images from `business-card.kicad_pcb` after visible design changes.
 - Always render exposed copper as gold, using the script's temporary ENIG override. Preserve the main PCB's fabrication settings, geometry, solder mask, and silkscreen; do not retouch renders.
 - Inspect both PNGs for clipping, orientation, missing models, and the gold finish. Check the README preview and links, and label the images as KiCad renders.
