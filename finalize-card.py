@@ -1,22 +1,18 @@
-#!/usr/bin/env -S uv run --script
-# /// script
-# requires-python = ">=3.10"
-# dependencies = ["python-dotenv>=1.0,<2"]
-# ///
+#!/usr/bin/env python3
 """Copy the KiCad project, personalize INFO1, then export fabrication files and previews."""
 
 import argparse
 import json
+import os
 import re
 import shutil
 import subprocess
 import sys
+import tomllib
 from collections.abc import Callable
 from datetime import datetime
 from pathlib import Path
 from zipfile import ZIP_DEFLATED, ZipFile
-
-from dotenv import dotenv_values
 
 ROOT = Path(__file__).resolve().parent
 BASE = "business-card"
@@ -32,7 +28,7 @@ FIELD = re.compile(
 
 
 def info1(document: str) -> str:
-    """Select the placed INFO1 block; library symbols have deeper indentation."""
+    """Select the placed INFO1 symbol or footprint in a saved KiCad file."""
     blocks = re.findall(r'(?ms)^\t\((?:symbol|footprint)\b.*?^\t\)', document)
     matches = [block for block in blocks if '\n\t\t(property "Reference" "INFO1"' in block]
     if len(matches) != 1:
@@ -41,16 +37,6 @@ def info1(document: str) -> str:
     if len(fields) != len(CONTACT_FIELDS) or {field["name"] for field in fields} != CONTACT_FIELDS:
         raise ValueError("INFO1 must contain each of the seven CONTACT_* fields once.")
     return matches[0]
-
-
-def replace_contact(document: str, contact: dict[str, str]) -> str:
-    """Replace only INFO1's contact values, leaving the surrounding file intact."""
-    original = info1(document)
-    updated = FIELD.sub(
-        lambda field: field["prefix"] + json.dumps(contact[field["name"]], ensure_ascii=False),
-        original,
-    )
-    return document.replace(original, updated, 1)
 
 
 def export(output: Path) -> None:
@@ -76,28 +62,33 @@ def export(output: Path) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--env", type=Path, default=ROOT / ".env",
-                        help="optional overrides (default: .env)")
+    parser.add_argument("--config", type=Path, default=ROOT / "contact.toml",
+                        help="optional contact overrides (default: contact.toml)")
     parser.add_argument("--output", type=Path,
                         default=ROOT / "output" / datetime.now().strftime("%Y%m%d-%H%M%S"),
                         help="new directory (default: output/<timestamp>)")
     args = parser.parse_args()
-    if args.env != parser.get_default("env") and not args.env.is_file():
-        parser.error(f"Contact file does not exist: {args.env}")
+    if args.config != parser.get_default("config") and not args.config.is_file():
+        parser.error(f"Contact file does not exist: {args.config}")
 
-    # 1. Read INFO1 and any contact details supplied in .env.
+    # 1. Read INFO1, then apply TOML and environment overrides, in that order.
     schematic = (ROOT / f"{BASE}.kicad_sch").read_text(encoding="utf-8")
+    original = info1(schematic)
     contact: dict[str, str] = {
-        field["name"]: json.loads(field["value"]) for field in FIELD.finditer(info1(schematic))
+        field["name"]: json.loads(field["value"]) for field in FIELD.finditer(original)
     }
-    overrides = dotenv_values(args.env, interpolate=False)
-    contact.update({key: value for key, value in overrides.items()
-                    if key in contact and value is not None})
+    overrides = {}
+    if args.config.is_file():
+        with args.config.open("rb") as stream:
+            overrides = tomllib.load(stream)
+    contact = {key: os.environ.get(key, overrides.get(key, value))
+               for key, value in contact.items()}
+    for key, value in contact.items():
+        if (not isinstance(value, str) or any(ord(char) < 32 for char in value)
+                or "${" in value or "@{" in value):
+            raise ValueError(f"{key} must be a single line of literal text.")
     if not contact["CONTACT_NAME"].strip():
         raise ValueError("CONTACT_NAME is required.")
-    for key, value in contact.items():
-        if any(ord(char) < 32 for char in value) or "${" in value or "@{" in value:
-            raise ValueError(f"{key} must be a single line of literal text.")
 
     # 2. Copy the project, leaving out private settings, caches, and prior exports.
     output: Path = args.output.resolve()
@@ -105,22 +96,29 @@ def main() -> None:
     if output.exists() or zipped.exists():
         raise ValueError(f"Output already exists; choose a new --output directory: {output}")
     ignore = shutil.ignore_patterns(
-        ".*", "output", "card-output", output.name, args.env.name, "*.env",
+        ".*", "output", "card-output", "*.env", "contact*.toml",
         "__pycache__", "*.pyc", "*-backups", "_autosave-*", "~*.lck",
         "*.kicad_prl", "fp-info-cache",
     )
     shutil.copytree(
         ROOT, output,
-        ignore=lambda directory, names: ignore(directory, names) - {".env.example", ".gitignore"},
+        ignore=lambda directory, names: (
+            ignore(directory, names) | {output.name, args.config.name}
+        ) - {"contact.example.toml", ".gitignore"},
     )
     (output / "fab").mkdir(exist_ok=True)
     (output / "docs").mkdir(exist_ok=True)
 
-    # 3. Set INFO1's fields and copy them to the PCB, like Update PCB from Schematic.
-    schematic = replace_contact(schematic, contact)
-    board = replace_contact((ROOT / f"{BASE}.kicad_pcb").read_text(encoding="utf-8"), contact)
-    (output / f"{BASE}.kicad_sch").write_text(schematic, encoding="utf-8")
-    (output / f"{BASE}.kicad_pcb").write_text(board, encoding="utf-8")
+    # 3. Set the same INFO1 fields in the copied schematic and PCB.
+    for suffix in ("kicad_sch", "kicad_pcb"):
+        path = output / f"{BASE}.{suffix}"
+        document = path.read_text(encoding="utf-8")
+        original = info1(document)
+        updated = FIELD.sub(
+            lambda field: field["prefix"] + json.dumps(contact[field["name"]], ensure_ascii=False),
+            original,
+        )
+        path.write_text(document.replace(original, updated, 1), encoding="utf-8")
 
     # 4. Reopen in KiCad, refill/check the board, and export fabrication files and previews.
     export(output)

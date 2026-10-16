@@ -32,16 +32,20 @@ Python and GitHub Actions are optional conveniences.
 
 The [finalizer](finalize-card.py) creates a personalized project copy and export
 bundle. It uses the saved INFO1 values; to override them only in the exported
-copy, copy [.env.example](.env.example) to `.env` and edit it. Omitted keys keep
-the INFO1 value; blank values clear optional fields.
+copy, copy [contact.example.toml](contact.example.toml) to `contact.toml` and edit
+it. Omitted keys keep the INFO1 value; `""` clears an optional field. For CI,
+`CONTACT_*` environment variables override both TOML and INFO1, including empty values.
 
-With [uv](https://docs.astral.sh/uv/), KiCad 10 and its standard 3D model libraries
-installed, run from this directory:
+Use Python 3.11+ with KiCad 10's `kicad-cli` on your PATH and standard 3D model
+libraries installed. No pip packages or virtual environment are needed:
 
 ```sh
-uv run finalize-card.py
-uv run finalize-card.py --env .env.personal --output output/personal
+python3 finalize-card.py
+python3 finalize-card.py --config contact.personal.toml --output output/personal
 ```
+
+On Windows, use `python` instead of `python3`. The **KiCad 10 Command Prompt**
+provides access to `kicad-cli`.
 
 The bundle contains a project-folder copy, Gerbers/drills and drill-map PDFs in
 `fab/`, refreshed schematic SVG/PDF and front/back renders in `docs/`, and `drc.rpt`.

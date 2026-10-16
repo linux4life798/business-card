@@ -9,5 +9,6 @@ fp-info-cache
 # Private contact details and generated bundles.
 /.env
 /.env.*
-!/.env.example
+/contact*.toml
+!/contact.example.toml
 /output/

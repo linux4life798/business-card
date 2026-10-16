@@ -2,7 +2,7 @@
 
 Read [README.md](README.md) for the project overview and file locations.
 
-- Keep the project usable entirely through KiCad's GUI, including personalization, inspection, and export. Bundle portable custom libraries/assets and make steps clear to beginners; Python, `.env`, and Actions are optional conveniences.
+- Keep the project usable entirely through KiCad's GUI, including personalization, inspection, and export. Bundle portable custom libraries/assets and make steps clear to beginners; Python, contact files, and Actions are optional conveniences.
 - Keep Python small, readable, and focused, with minimal options and outputs. Use modern parameter and return annotations, built-in collection types, and `|` unions; avoid clever abstractions and compressed code.
 - Keep changes scoped to the request and preserve unrelated work.
 - Respect library-only edits. Update the PCB's embedded footprints from the library only when propagation is intended, then save before rendering.

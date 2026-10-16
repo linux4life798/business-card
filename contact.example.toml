@@ -1,0 +1,10 @@
+# Optional overrides for the schematic INFO1 symbol's CONTACT_* fields.
+# Copy to contact.toml and edit. Omitted keys keep INFO1; "" clears a field.
+# CONTACT_* environment variables take precedence over this file.
+CONTACT_NAME = "Alex Example"
+CONTACT_ROLE = "Systems Engineer"
+CONTACT_COMPANY = ""
+CONTACT_EMAIL = "alex@example.com"
+CONTACT_PHONE = ""
+CONTACT_WEB = "example.com"
+CONTACT_WEB_QR = "https://example.com"
