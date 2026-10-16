@@ -205,12 +205,6 @@
 		(path "/3c1b1c81-a21d-47b6-840b-2231244db5ac")
 		(sheetname "/")
 		(sheetfile "business-card.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "3" "5" "2" "4" "6")
-			)
-		)
 		(attr exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -449,87 +443,12 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Amicc"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "200e2dab-2567-462e-856a-90814c5a6c55")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "MPN" "A-SP192SS1C-C01-3C"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "ba100ce1-6111-4f0a-a0f2-71aad2de5c28")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "LCSC" "C5179642"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "0756e5fc-5156-4f70-b0ba-3af9b4c86b0a")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property ki_fp_filters "Amicc_A-SP192SS1C-C01-3C_SideView")
 		(path "/eff410cf-3d79-4f95-b511-c6c15b6b56d3")
 		(sheetname "/")
 		(sheetfile "business-card.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "2" "1")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
-		(fp_line
-			(start -0.8 -0.46)
-			(end 0.8 -0.46)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "fbd7819e-62e8-4bd4-bec1-23c5d9e0ec1c")
-		)
-		(fp_line
-			(start -1.25 -0.2)
-			(end -1.25 0.6)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "5cf3c3da-cf17-4d09-b468-4cbdd4d91067")
-		)
-		(fp_line
-			(start -0.8 0.73)
-			(end 0.8 0.73)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "935c570f-de7b-44e5-b537-e4bb4e5007c4")
-		)
 		(fp_rect
 			(start -1.3 -0.55)
 			(end 1.3 0.8)
@@ -705,16 +624,22 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 0 0 180)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "9d7cb142-012b-4f17-ac2e-2fe3a5b8c2ed")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/452fed62-d3fb-414b-9219-e8b98ab294ef")
 		(sheetname "/")
 		(sheetfile "business-card.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -853,16 +778,22 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 0 0 270)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "726cf364-36f6-43a6-a367-d30a9d526b64")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/ca3ac4d9-6d14-4c75-9ede-fc53b93b90b6")
 		(sheetname "/")
 		(sheetfile "business-card.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1001,42 +932,10 @@
 				)
 			)
 		)
-		(property "Manufacturer" "NXP Semiconductors"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "7e9a1647-ff33-4fe4-bb06-5ccd320252dc")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "MPN" "NT3H2111W0FHKH"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "87c966b6-3154-4300-94d2-27654744a93f")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property ki_fp_filters "NXP_SOT902-3_XQFN-8_1.6x1.6mm")
 		(path "/a55022e8-a09a-49fb-a517-de820c7830b5")
 		(sheetname "/")
 		(sheetfile "business-card.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "8" "6" "2" "3" "5" "4" "7")
-			)
-		)
 		(solder_mask_margin 0.025)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
@@ -1338,16 +1237,22 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 0 0 270)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a6ed4281-c90b-4fd6-a387-a0e5648ea172")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/422ee92b-2dbd-4ed2-b154-e5c8c3e49d41")
 		(sheetname "/")
 		(sheetfile "business-card.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1486,16 +1391,22 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 0 0 270)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a93c5d80-ae81-4d10-a6c3-60f56047b2f6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/a114da9a-f616-4bb8-9a22-9da226e0ae94")
 		(sheetname "/")
 		(sheetfile "business-card.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1634,16 +1545,22 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 0 0 180)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "da69ec4e-18da-4f52-892d-c61240ceb7ab")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/fc2782db-f557-4c8b-9834-10e72e13df79")
 		(sheetname "/")
 		(sheetfile "business-card.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1782,16 +1699,22 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 0 0 270)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a93b4719-ac2f-4db0-8f93-0f77a8629761")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/d51fcc28-0278-400f-89b5-ff19cf53e55b")
 		(sheetname "/")
 		(sheetfile "business-card.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1947,12 +1870,6 @@
 		(path "/4815ff71-b7b8-49e0-b6f0-68be78a4a9a6")
 		(sheetname "/")
 		(sheetfile "business-card.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins)
-			)
-		)
 		(attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_text user "CJH '${YEAR}"
@@ -2052,55 +1969,10 @@
 				)
 			)
 		)
-		(property "Source" "https://content.instructables.com/FQV/3JXV/JRBBMXRR/FQV3JXVJRBBMXRR.lbr"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "66840b3f-80bb-42e1-b0ef-7ee3b742c0bd")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Author" "Loann Boudin (loboat); antenna adapted from NXP Class 4"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "ccef4846-93ad-4f65-97b8-9981bafdcd59")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "License" "CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "34ba6514-8a03-4468-b575-f8db0003f51e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property ki_fp_filters "Loboat_NFC_Antenna_48x25mm_5Turns")
 		(path "/6e8b2129-b31e-4f8b-9811-1527b414486d")
 		(sheetname "/")
 		(sheetfile "business-card.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "P$1" "P$2")
-			)
-		)
 		(attr exclude_from_pos_files exclude_from_bom)
 		(net_tie_pad_groups "P$1,P$2")
 		(duplicate_pad_numbers_are_jumpers no)
@@ -2962,12 +2834,6 @@
 		(path "/65a4c040-8648-4b54-a857-a880ea15fc0a")
 		(sheetname "/")
 		(sheetfile "business-card.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins)
-			)
-		)
 		(attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
@@ -7507,12 +7373,6 @@
 		(path "/a884dd2f-6963-4c62-afe9-bd2545f7a2da")
 		(sheetname "/")
 		(sheetfile "business-card.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins)
-			)
-		)
 		(attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8790,12 +8650,6 @@
 		(path "/245ad908-9c75-4e78-8419-104fd5c0cda6")
 		(sheetname "/")
 		(sheetfile "business-card.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins)
-			)
-		)
 		(attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
