@@ -3181,7 +3181,7 @@
 		)
 	)
 	(rectangle
-		(start 69.85 92.71)
+		(start 55.88 92.71)
 		(end 251.46 153.67)
 		(stroke
 			(width 0)
@@ -3205,8 +3205,8 @@
 		(uuid "b1ee6192-ccdc-4d6d-9424-35ca99ed38f3")
 	)
 	(rectangle
-		(start 29.21 92.71)
-		(end 58.42 127)
+		(start 20.32 92.71)
+		(end 49.53 127)
 		(stroke
 			(width 0)
 			(type default)
@@ -3215,17 +3215,6 @@
 			(type none)
 		)
 		(uuid "c2d0a0ee-cb38-4548-bd88-21d0af6dc048")
-	)
-	(text "Edit INFO1's CONTACT_* fields.\nUpdate PCB from Schematic (F8), then\nsave and reopen the PCB to refresh the QR."
-		(exclude_from_sim no)
-		(at 76.2 168.91 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "7f922564-6253-41cc-a4a3-7f15fd953801")
 	)
 	(text "Minimal NFC and LED Circuit"
 		(exclude_from_sim no)
@@ -3260,13 +3249,24 @@
 	)
 	(text "Disabled I2C TestPoints"
 		(exclude_from_sim no)
-		(at 43.434 96.012 0)
+		(at 34.544 96.012 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 		(uuid "4c2d58f1-37c1-4c28-baa2-945cf7f6b7e9")
+	)
+	(text "Edit INFO1's CONTACT_* fields.\nUpdate PCB from Schematic (F8), then\nsave and reopen the PCB to refresh the QR."
+		(exclude_from_sim no)
+		(at 76.2 168.91 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "7f922564-6253-41cc-a4a3-7f15fd953801")
 	)
 	(text "Tag-Connect I2C for Hika FTDI"
 		(exclude_from_sim no)
@@ -3288,6 +3288,16 @@
 			(href "https://www.tag-connect.com/product/tc2030-cic-ft232h-3v3")
 		)
 		(uuid "a74b1db7-88aa-4409-9a51-0eb749ca73ba")
+	)
+	(text "Place near NFC IC."
+		(exclude_from_sim no)
+		(at 58.42 120.65 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "c6a902b7-8a4b-46f6-8944-de1855288ca1")
 	)
 	(text "* Tag-Connect TC2030 3.3V FT232H No-legs"
 		(exclude_from_sim no)
@@ -3560,7 +3570,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 105.41) (xy 43.18 105.41)
+			(xy 30.48 105.41) (xy 34.29 105.41)
 		)
 		(stroke
 			(width 0)
@@ -3790,7 +3800,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 123.19) (xy 43.18 123.19)
+			(xy 29.21 123.19) (xy 34.29 123.19)
 		)
 		(stroke
 			(width 0)
@@ -3820,7 +3830,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 109.22) (xy 39.37 107.95)
+			(xy 29.21 109.22) (xy 30.48 107.95)
 		)
 		(stroke
 			(width 0)
@@ -3850,13 +3860,23 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 107.95) (xy 43.18 107.95)
+			(xy 30.48 107.95) (xy 34.29 107.95)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "ddd167a4-6108-4b10-835f-bd39d174ef35")
+	)
+	(wire
+		(pts
+			(xy 62.23 109.22) (xy 62.23 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dffa0f97-e9ae-4b5c-9153-e5a7e54eaf45")
 	)
 	(wire
 		(pts
@@ -3880,7 +3900,17 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 120.65) (xy 43.18 120.65)
+			(xy 62.23 121.92) (xy 62.23 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ecae6b66-e569-4287-a124-f24018048beb")
+	)
+	(wire
+		(pts
+			(xy 29.21 120.65) (xy 34.29 120.65)
 		)
 		(stroke
 			(width 0)
@@ -3890,7 +3920,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 104.14) (xy 39.37 105.41)
+			(xy 29.21 104.14) (xy 30.48 105.41)
 		)
 		(stroke
 			(width 0)
@@ -3940,7 +3970,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 118.11) (xy 43.18 118.11)
+			(xy 29.21 118.11) (xy 34.29 118.11)
 		)
 		(stroke
 			(width 0)
@@ -4346,7 +4376,7 @@
 		(uuid "404be949-1c53-4a6e-9ae8-2478dce2e433")
 	)
 	(label "~{FD}"
-		(at 38.1 118.11 0)
+		(at 29.21 118.11 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4396,7 +4426,7 @@
 		(uuid "8395b6fb-7761-4ac6-8dc9-175f879c5e08")
 	)
 	(label "SCL"
-		(at 38.1 120.65 0)
+		(at 29.21 120.65 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4406,7 +4436,7 @@
 		(uuid "8c16b5f7-f727-4b21-89cc-06b9889ba9fa")
 	)
 	(label "SDA"
-		(at 38.1 123.19 0)
+		(at 29.21 123.19 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4477,7 +4507,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0f39c436-68cd-4367-a48d-aea73c439de4")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR07"
 			(at 125.73 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -4538,7 +4568,7 @@
 		(instances
 			(project "business-card"
 				(path "/d47d11a5-7f30-4f5f-a335-6efc49b156b4"
-					(reference "#PWR03")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -4709,7 +4739,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2c9308e8-553b-4e7c-8fb8-a9b3cba55f6f")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR012"
 			(at 170.18 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -4770,7 +4800,7 @@
 		(instances
 			(project "business-card"
 				(path "/d47d11a5-7f30-4f5f-a335-6efc49b156b4"
-					(reference "#PWR08")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -4778,7 +4808,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 43.18 123.19 270)
+		(at 34.29 123.19 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4788,7 +4818,7 @@
 		(dnp no)
 		(uuid "389dd4d1-49a7-4fc8-916f-dd5215b559dc")
 		(property "Reference" "TP5"
-			(at 47.244 123.19 90)
+			(at 38.354 123.19 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4799,7 +4829,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 48.26 124.4599 90)
+			(at 39.37 124.4599 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4811,7 +4841,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 43.18 128.27 0)
+			(at 34.29 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4822,7 +4852,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 43.18 128.27 0)
+			(at 34.29 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4833,7 +4863,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 43.18 123.19 0)
+			(at 34.29 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4949,7 +4979,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 43.18 107.95 270)
+		(at 34.29 107.95 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4959,7 +4989,7 @@
 		(dnp no)
 		(uuid "3d2d34e4-483b-4f83-826a-4872774540bc")
 		(property "Reference" "TP2"
-			(at 51.054 107.95 90)
+			(at 42.164 107.95 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4970,7 +5000,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 47.7519 105.41 0)
+			(at 38.8619 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4982,7 +5012,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 43.18 113.03 0)
+			(at 34.29 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4993,7 +5023,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 43.18 113.03 0)
+			(at 34.29 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5004,7 +5034,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 43.18 107.95 0)
+			(at 34.29 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5277,8 +5307,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 38.1 109.22 0)
+		(lib_id "power:VCC")
+		(at 62.23 109.22 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5286,9 +5316,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "5a8f68f3-5ec0-4c56-b766-8f2dc283fbbc")
-		(property "Reference" "#PWR010"
-			(at 38.1 115.57 0)
+		(uuid "499d1bb1-80ae-4569-bf96-cdae59866e19")
+		(property "Reference" "#PWR03"
+			(at 62.23 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5298,8 +5328,8 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 36.068 112.776 0)
+		(property "Value" "VCC"
+			(at 60.452 105.41 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5310,7 +5340,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 38.1 109.22 0)
+			(at 62.23 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5321,7 +5351,85 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 38.1 109.22 0)
+			(at 62.23 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 62.23 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b962129e-b019-43f5-9b1e-4bc5b7cfc9fb")
+		)
+		(instances
+			(project "business-card"
+				(path "/d47d11a5-7f30-4f5f-a335-6efc49b156b4"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 29.21 109.22 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5a8f68f3-5ec0-4c56-b766-8f2dc283fbbc")
+		(property "Reference" "#PWR02"
+			(at 29.21 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 27.178 112.776 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 29.21 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 29.21 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5332,7 +5440,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 38.1 109.22 0)
+			(at 29.21 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5348,7 +5456,7 @@
 		(instances
 			(project "business-card"
 				(path "/d47d11a5-7f30-4f5f-a335-6efc49b156b4"
-					(reference "#PWR010")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -5365,7 +5473,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5a9258d5-7b65-42aa-b8c9-42e2e457d2a5")
-		(property "Reference" "#PWR01"
+		(property "Reference" "#PWR05"
 			(at 87.63 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -5426,7 +5534,7 @@
 		(instances
 			(project "business-card"
 				(path "/d47d11a5-7f30-4f5f-a335-6efc49b156b4"
-					(reference "#PWR01")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -5434,7 +5542,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 43.18 118.11 270)
+		(at 34.29 118.11 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5444,7 +5552,7 @@
 		(dnp no)
 		(uuid "5d669715-66b4-4b8f-8f08-460200c048fb")
 		(property "Reference" "TP3"
-			(at 47.498 118.11 90)
+			(at 38.608 118.11 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5455,7 +5563,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 48.26 119.3799 90)
+			(at 39.37 119.3799 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5467,7 +5575,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 43.18 123.19 0)
+			(at 34.29 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5478,7 +5586,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 43.18 123.19 0)
+			(at 34.29 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5489,7 +5597,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 43.18 118.11 0)
+			(at 34.29 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5610,7 +5718,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "67fc2a60-1654-4308-9302-5572797cf161")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR08"
 			(at 125.73 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -5671,7 +5779,7 @@
 		(instances
 			(project "business-card"
 				(path "/d47d11a5-7f30-4f5f-a335-6efc49b156b4"
-					(reference "#PWR04")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -5802,7 +5910,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7149ddb3-fda3-408a-a8ae-02b24d2fdf78")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR010"
 			(at 153.67 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -5863,7 +5971,7 @@
 		(instances
 			(project "business-card"
 				(path "/d47d11a5-7f30-4f5f-a335-6efc49b156b4"
-					(reference "#PWR06")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -5881,7 +5989,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7deb8274-99ee-4fb1-a2ae-818953cf88bb")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR011"
 			(at 170.18 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -5942,7 +6050,7 @@
 		(instances
 			(project "business-card"
 				(path "/d47d11a5-7f30-4f5f-a335-6efc49b156b4"
-					(reference "#PWR07")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -5950,7 +6058,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 43.18 105.41 270)
+		(at 34.29 105.41 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5960,7 +6068,7 @@
 		(dnp no)
 		(uuid "87af0e4c-96f6-4115-9b20-f92530ba1c8a")
 		(property "Reference" "TP1"
-			(at 47.498 105.41 90)
+			(at 38.608 105.41 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5971,7 +6079,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 45.2121 107.95 0)
+			(at 36.3221 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5983,7 +6091,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 43.18 110.49 0)
+			(at 34.29 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5994,7 +6102,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 43.18 110.49 0)
+			(at 34.29 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6005,7 +6113,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 43.18 105.41 0)
+			(at 34.29 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6466,8 +6574,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 38.1 104.14 0)
+		(lib_id "power:GND")
+		(at 62.23 133.35 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6475,9 +6583,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "b2fa32c5-32db-47be-9d4d-c4717ab1ca29")
-		(property "Reference" "#PWR09"
-			(at 38.1 107.95 0)
+		(uuid "abd0f7e2-a36b-422f-bc3c-2316722e62b0")
+		(property "Reference" "#PWR04"
+			(at 62.23 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6487,8 +6595,8 @@
 				)
 			)
 		)
-		(property "Value" "VCC"
-			(at 36.322 100.584 0)
+		(property "Value" "GND"
+			(at 60.198 136.906 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6499,7 +6607,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 38.1 104.14 0)
+			(at 62.23 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6510,7 +6618,85 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 38.1 104.14 0)
+			(at 62.23 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 62.23 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c86d3d8a-50a0-408e-bb28-d78697db9607")
+		)
+		(instances
+			(project "business-card"
+				(path "/d47d11a5-7f30-4f5f-a335-6efc49b156b4"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 29.21 104.14 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b2fa32c5-32db-47be-9d4d-c4717ab1ca29")
+		(property "Reference" "#PWR01"
+			(at 29.21 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VCC"
+			(at 27.432 100.584 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 29.21 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 29.21 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6521,7 +6707,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 38.1 104.14 0)
+			(at 29.21 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6537,7 +6723,89 @@
 		(instances
 			(project "business-card"
 				(path "/d47d11a5-7f30-4f5f-a335-6efc49b156b4"
-					(reference "#PWR09")
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 62.23 118.11 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b707ebd8-f688-4907-9f36-fcf736e361c4")
+		(property "Reference" "C3"
+			(at 66.04 116.8399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "180nF"
+			(at 66.04 119.3799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
+			(at 63.1952 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.23 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 62.23 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cab13766-6f8f-4882-ac76-abc07a88db18")
+		)
+		(pin "2"
+			(uuid "869b41b3-b870-4af7-b742-dd2b01759ea8")
+		)
+		(instances
+			(project "business-card"
+				(path "/d47d11a5-7f30-4f5f-a335-6efc49b156b4"
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -6719,7 +6987,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d6688797-697f-4a71-815d-b68d1fb91a92")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR09"
 			(at 140.97 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -6780,7 +7048,7 @@
 		(instances
 			(project "business-card"
 				(path "/d47d11a5-7f30-4f5f-a335-6efc49b156b4"
-					(reference "#PWR05")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -6797,7 +7065,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e921f7a7-c206-4b48-960c-92adfa4f373a")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR06"
 			(at 87.63 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -6858,7 +7126,7 @@
 		(instances
 			(project "business-card"
 				(path "/d47d11a5-7f30-4f5f-a335-6efc49b156b4"
-					(reference "#PWR02")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -6866,7 +7134,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 43.18 120.65 270)
+		(at 34.29 120.65 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6876,7 +7144,7 @@
 		(dnp no)
 		(uuid "ea55ea66-9d13-4438-ae48-2fd44695ddd0")
 		(property "Reference" "TP4"
-			(at 47.244 120.65 90)
+			(at 38.354 120.65 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6887,7 +7155,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 48.26 121.9199 90)
+			(at 39.37 121.9199 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6899,7 +7167,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 43.18 125.73 0)
+			(at 34.29 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6910,7 +7178,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 43.18 125.73 0)
+			(at 34.29 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6921,7 +7189,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 43.18 120.65 0)
+			(at 34.29 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7081,7 +7349,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "150nF"
+		(property "Value" "180nF"
 			(at 144.78 59.6899 0)
 			(show_name no)
 			(do_not_autoplace no)
