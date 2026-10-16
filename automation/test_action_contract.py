@@ -16,7 +16,7 @@ from unittest import mock
 import zipfile
 
 ROOT = Path(__file__).resolve().parent.parent
-SPEC = importlib.util.spec_from_file_location("finalize_card", ROOT / "finalize-card.py")
+SPEC = importlib.util.spec_from_file_location("finalize_card", ROOT / "copy-and-customize.py")
 FINALIZER = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(FINALIZER)
 
@@ -53,7 +53,7 @@ class ActionContractTests(unittest.TestCase):
 
     def run_finalizer(self, config: str | None = "", environment: dict[str, str] | None = None,
                       config_path: Path | None = None) -> dict[str, str]:
-        arguments = ["finalize-card.py", "--output", str(self.output)]
+        arguments = ["copy-and-customize.py", "--output", str(self.output)]
         if config is not None:
             config_path = config_path or self.source / "contact.personal.toml"
             config_path.write_text(config, encoding="utf-8")

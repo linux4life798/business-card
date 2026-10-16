@@ -30,7 +30,7 @@ Python and GitHub Actions are optional conveniences.
 <details>
 <summary>Optional: automated exports</summary>
 
-The [finalizer](finalize-card.py) creates a personalized project copy and export
+The [finalizer](copy-and-customize.py) creates a personalized project copy and export
 bundle. It uses the saved INFO1 values; to override them only in the exported
 copy, copy [contact.example.toml](contact.example.toml) to `contact.toml` and edit
 it. Omitted keys keep the INFO1 value; `""` clears an optional field. For CI,
@@ -40,8 +40,8 @@ Use Python 3.11+ with KiCad 10's `kicad-cli` on your PATH and standard 3D model
 libraries installed. No pip packages or virtual environment are needed:
 
 ```sh
-python3 finalize-card.py
-python3 finalize-card.py --config contact.personal.toml --output output/personal
+python3 copy-and-customize.py
+python3 copy-and-customize.py --config contact.personal.toml --output output/personal
 ```
 
 On Windows, use `python` instead of `python3`. The **KiCad 10 Command Prompt**
