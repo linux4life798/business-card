@@ -10,41 +10,30 @@ QR code, custom copper and silkscreen artwork, and passive NFC.
 
 *KiCad 3D renders of the front and back, with gold on exposed copper.*
 
-## Schematic
+## Make it yours
 
-The design uses an NXP NT3H2111W0FHKH (NTAG I2C Plus) and a printed antenna for
-tap-to-share contact information. It is designed to harvest energy from the NFC
-reader's field to illuminate an LED, with no onboard battery or microcontroller.
+You can personalize and export the card entirely through **KiCad 10**.
+Python and GitHub Actions are optional conveniences.
 
-[![KiCad export of the main schematic page](docs/business-card-schematic.svg)](docs/business-card-schematic.pdf)
+1. Download or clone the whole project folder and open
+   [business-card.kicad_pro](business-card.kicad_pro).
+2. In the schematic, open **INFO1** properties and edit its `CONTACT_*` fields.
+   Company, role, phone, email and website are optional. `CONTACT_WEB` is the
+   printed address; `CONTACT_WEB_QR` is the QR's full URL, including `https://`.
+3. Use **Update PCB from Schematic (F8)** with **Update footprint fields from
+   symbols** enabled.
+4. **Save, close and reopen the PCB Editor** to refresh KiCad 10's QR pattern.
+   Check the text layout and scan the QR to confirm your details.
+5. Run **Inspect → Design Rules Checker** and review its findings. Export Gerbers
+   and drill files from **File → Fabrication Outputs** when ready to order.
 
-## Project files
+<details>
+<summary>Optional: automated exports</summary>
 
-Open [business-card.kicad_pro](business-card.kicad_pro) in **KiCad 10** to explore
-the design:
-
-- [business-card.kicad_sch](business-card.kicad_sch) — circuit schematic.
-- [business-card.kicad_pcb](business-card.kicad_pcb) — PCB layout.
-- [business-card.kicad_sym](business-card.kicad_sym) — project symbols.
-- [business-card.pretty/](business-card.pretty/) — project footprints.
-- [business-card.3dshapes/](business-card.3dshapes/) — project 3D models.
-- [artwork/](artwork/) — SVG artwork and previews used to generate footprints.
-
-## Personalize and export
-
-In the schematic, open **INFO1** properties and edit its `CONTACT_*` fields.
-Use **Update PCB from Schematic (F8)** with **Update footprint fields from
-symbols** enabled to copy the details to the PCB. The
-[contact-info footprint](business-card.pretty/Contact_Info_SilkScreen.kicad_mod)
-uses those fields for its printed text and native vCard QR code.
-Company, role, phone, email and website are optional.
-After F8, **save and reopen the PCB** to refresh KiCad 10's cached QR pattern.
-If a footprint library update restores default contact values, repeat F8 and
-the QR refresh to reapply INFO1.
-
-For export-only overrides, copy [.env.example](.env.example) to `.env`.
-Omitted keys keep the schematic INFO1 value; blank values clear optional fields
-and omit them from the exported QR, vCard and NFC data.
+The [finalizer](finalize-card.py) creates a personalized project copy and export
+bundle. It uses the saved INFO1 values; to override them only in the exported
+copy, copy [.env.example](.env.example) to `.env` and edit it. Omitted keys keep
+the INFO1 value; blank values clear optional fields.
 
 With [uv](https://docs.astral.sh/uv/), KiCad 10 and its standard 3D model libraries
 installed, run from this directory:
@@ -54,19 +43,35 @@ uv run finalize-card.py
 uv run finalize-card.py --env .env.personal --output output/personal
 ```
 
-`uv` installs the dotenv dependency automatically. The script copies the contact
-fields into the output schematic and PCB, refreshes the native QR, and exports it.
-The source project stays unchanged during export.
-Generated QR and NFC data are fixed snapshots; change the source INFO1 fields
-and rerun the exporter for a new bundle.
+The bundle contains a project-folder copy, Gerbers/drills and drill-map PDFs in
+`fab/`, refreshed schematic SVG/PDF and front/back renders in `docs/`, and `drc.rpt`.
+Local settings, contact files, caches and previous exports are excluded.
+It defaults to `output/<timestamp>/` plus one ZIP, preserving source files and
+existing exports. Review the report and previews before ordering; DRC findings
+do not prevent export. The exported project remains editable through the same
+INFO1 workflow; regenerate fabrication files after further edits.
 
-The output directory and matching ZIP include the personalized KiCad sources,
-fabrication files (`fab.zip`), assembly files, front/back KiCad renders,
-schematic SVG/PDF, vCard/NDEF contact files, and DRC/ERC reports. The default
-destination is a new timestamped directory under `output/`. Existing output
-destinations are never overwritten. Review `BUILD.txt` and the reports before
-ordering: design errors are reported but do not prevent artifact export.
-Program the exported NFC contact data onto the assembled card separately.
+For builds on GitHub, see the [private-repository action and starter workflow](automation/README.md).
+
+</details>
+
+## Explore the design
+
+The NFC circuit uses an NXP NT3H2111W0FHKH (NTAG I2C Plus) and a printed antenna.
+It is designed to illuminate an LED using energy from the reader's field,
+with no onboard battery or microcontroller.
+
+[![KiCad export of the main schematic page](docs/business-card-schematic.svg)](docs/business-card-schematic.pdf)
+
+- [Schematic](business-card.kicad_sch) and [PCB layout](business-card.kicad_pcb).
+- Project [symbols](business-card.kicad_sym), [footprints](business-card.pretty/)
+  and [3D models](business-card.3dshapes/).
+- [Artwork](artwork/) and its source SVGs.
+
+INFO1 supplies the fields used by the
+[contact-info footprint](business-card.pretty/Contact_Info_SilkScreen.kicad_mod)
+for its text and native QR. If a footprint library update restores default
+contact values, repeat F8 and the save/reopen step to reapply your details.
 
 ## Fabrication
 
